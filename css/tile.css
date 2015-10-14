@@ -1,0 +1,58 @@
+/* 	CSS styling for the tile class
+	Used on the main portfolio page */
+
+.tile {
+	background: #A5C0D1;
+	color: white;
+	margin-bottom: 25px;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.tile:hover {
+	background: #3497DA;
+}
+
+.tile-fade {
+	opacity: .3;
+}
+
+.tile-img-wrapper {
+	background: #ffffff;
+}
+
+.tile-img:hover {
+	cursor: pointer;
+}
+
+.tile-info {
+	text-align: left;
+	padding: 10px;
+}
+
+.tile-info-title {
+	font-size: 1.25em;
+	font-weight: 700;
+	letter-spacing: .1em;
+}
+
+.scroll-helper {
+	padding: 10px 0;
+}
+
+/* Remove hover effect on mobile */
+@media(max-width:768px) {
+	.tile {
+		background: #3497DA;
+	}
+
+	.tile-fade {
+		opacity: 1;
+	}
+
+	.scroll-helper {
+		display: none;
+	}
+}

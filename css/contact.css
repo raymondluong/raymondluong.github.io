@@ -1,0 +1,35 @@
+.contact-item {
+	display: flex;
+	justify-content: flex-start;
+	padding-bottom: 10px;
+}
+
+.contact-icon {
+	padding: 0 5px;
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact-icon > a {
+	color: black;
+}
+
+.contact-icon > a:hover {
+	color: #3497DA;
+}
+
+.contact-text {
+	flex: 9;
+}
+
+.contact-text-title {
+	font-size: 1.15em;
+}
+
+@media (min-width:768px) and (max-width:992px) {
+	.contact-text {
+		flex: 3;
+	}
+}
