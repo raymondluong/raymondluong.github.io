@@ -5,7 +5,7 @@ $(document).on('ready', function(){
 	$('.tile-img').on('click', function(e){
 		var url = e.currentTarget.id;
 		if (url === 'apo') url = 'blank';
-	    window.open(url + '.html', '_self');
+	    window.open(url, '_self');
 	});
 	$('.tile').fadeIn(1000);
 	$('.tile').on('mouseover', function() {
