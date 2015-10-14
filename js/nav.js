@@ -3,7 +3,7 @@
 $(document).on('ready', function(){	
 	$('.js-nav-btn').on('click', function(e){
 		var section = e.currentTarget.id;
-		if (section === 'portfolio') section = 'index';
+		if (section === 'portfolio') section = '/';
 	    window.open(section, '_self');
 	});
 	$('.sidebar-title').on('click', function() {
