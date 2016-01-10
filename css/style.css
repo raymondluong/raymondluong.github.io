@@ -1,125 +1,79 @@
+/* Accent color: #3497DA */
+
 body {
 	font-family: Lato, sans-serif;
+	font-size: 18px;
+	margin: 0;
+	background: #D8D8D8;
+}
+
+.container {
+	text-align: center;
+	position: absolute;
 	height: 100%;
 	width: 100%;
-	background: #F8F8F8;
-}
-
-.main-container {
-	margin: 0 100px;
-}
-
-.background {
-	height: 100%;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background: url('../images/cloud.jpeg') no-repeat;
-	background-size: cover;
-	z-index: -1;
-	-webkit-filter: blur(3px);
-  	filter: blur(3px);
-}
-
-.sidebar-wrapper {
-	position: fixed;
-	width: 400px;
-	height: 100%;
-	padding-right: 25px;
-	overflow-y: auto;
-	text-align: right;
-	background: transparent;
 	display: flex;
-	justify-content: center;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-.sidebar-wrapper > div {
-	padding-top: 50px;
+.container div {
+	margin-top: 25px;
 }
 
-.sidebar-title {
-	font-family: Caveat, sans-serif;
-	font-weight: 700;
+.container div:first-child {
+	margin-top: 0;
+	margin-bottom: 50px;
+}
+
+.title {
 	font-size: 5em;
-	line-height: .8em;
+	font-family: Caveat;
 	color: #3497DA;
-	cursor: pointer;
 }
 
-.sidebar-subtitle {
-	font-size: 1.2em;
+.subtitle {
+	font-size: 1.5em;
 }
 
-.sidebar-nav {
-	list-style-type: none;
-	padding: 0;
-	color: black;
-	font-size: 1.1em;
-	line-height: 1.5em;
+.contact-link {
+	display: inline-block;
 }
 
-.sidebar-nav-btn {
-	color: white;
-	background: #A5C0D1;
+.contact-link {
+	margin: 0 10px;
 }
 
-.sidebar-nav-btn--selected {
-	background: #3497DA;
+.contact-link i {
+	color: #000000;
 }
 
-.sidebar-nav-btn:hover {
-	color: white;
-	background: #3497DA;
+.contact-link i:hover {
+	color: #3497DA;
 }
 
 .content-wrapper {
-	position: relative;
-	margin-left: 450px;
-	text-align: center;
 	-webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    background: transparent;
 }
 
 /* Mobile-friendly styling */
 @media(max-width:768px) {
-	.main-container {
-		margin: 0;
+	body {
+		font-size: 14px;
+	}
+	
+	.container div {
+		margin-top: 10px;
 	}
 
-	.sidebar-wrapper {
-		position: relative;
-		text-align: center;
-		width: 100%;
-		padding-bottom: 25px;
-		padding-right: 10px;
-		padding-left: 10px;
-	}
-
-	.sidebar-wrapper > div {
-		padding-top: 15px;
-	}
-
-	.sidebar-title {
-		text-align: center;
-	}
-
-	.sidebar-nav-wrapper {
-		display: flex;
-		justify-content: center;
-	}
-
-	.sidebar-nav-btn {
-		margin: 0 15px;
-	}
-
-	.content-wrapper {
-		margin: 0px;
-	}
+	.container div:first-child {
+		margin-top: 0;
+		margin-bottom: 20px;
+}
 }
 
 .fade-in {
@@ -134,9 +88,9 @@ body {
 	animation-delay: 1s;	
 }
 
-.delay-three {
-	-webkit-animation-delay: 3s;
-	animation-delay: 3s;	
+.delay-two {
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;	
 }
 
 @-webkit-keyframes fadeIn {
