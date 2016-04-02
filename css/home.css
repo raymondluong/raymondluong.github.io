@@ -42,8 +42,9 @@ body {
 	margin: 0;
 }
 
-.card__subtitle p {
+.card__subtitle h3 {
 	margin: .5em 0;
+	font-weight: normal;
 }
 
 .card__text {
