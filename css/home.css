@@ -48,6 +48,7 @@ body {
 }
 
 .card__text {
+	text-align: center;
 	margin: 1em 0;
 }
 
