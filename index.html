@@ -5,94 +5,58 @@ css: home.css
 
 <div class="container">
 
-    <div class="cards">
 
-    <div class="card">
+  <div class="card slide-in">
 
-      <div class="card__img">
-        <img src="images/raymond.jpg" / alt="Raymond Luong">
-      </div>
-
-      <div class="card__title">
-        <h1>Raymond Luong</h1>
-      </div>
-
-      <div class="card__subtitle">
-        <h3>Developer and Designer</h3>
-      </div>
-
-      <!-- <div class="card__text">
-        <p>Currently redesigning my website. Come back later! :)</p>
-      </div> -->
-
-      <!-- <div class="card__icons">
-        <a target="_blank" href="http://www.linkedin.com/in/raymondluong"><i class="fa fa-linkedin-square fa-2x social"></i></a>
-
-        <a target="_blank" href="http://github.com/raymondluong"><i class="fa fa-github fa-2x social"></i></a>
-
-        <a target="_blank" href="http://www.instagram.com/instaraymond"><i class="fa fa-instagram fa-2x social"></i></a>
-        
-        <a target="_blank" href="mailto:rayluong92@gmail.com"><i class="fa fa-envelope fa-2x social"></i></a>
-      </div> -->
-
-      <div class="card__navs">
-        <div class="card__navs__row">
-          <a href="">About</a> 
-          <a href="">Portfolio</a>
-        </div> 
-        <div class="card__navs__row">
-          <a href="">Blog</a> 
-          <a href="">Contact</a>
-        </div>
-      </div>
-
-    </div> 
-
-    <div class="button button--closed">
-      <i class="fa fa-chevron-right"></i>
-      <i class="fa fa-chevron-left"></i>
-      <i class="fa fa-chevron-down"></i>
-      <i class="fa fa-chevron-up"></i>
-    </div> 
-
-    <div class="card card__slider card__slider--closed">
-
-      <div class="card__subtitle">
-        <h3>Recent Blog Posts</h3>
-      </div>
-
-      <div class="card__text">
-        This is the title of my first blog post. These are sentences that will describe my blog post. Words lots of words yes words.    
-      </p>
-
+    <div class="card__img">
+      <img src="images/raymond.jpg" / alt="Raymond Luong">
     </div>
 
-  </div>
+    <div class="card__title">
+      <h1>Raymond Luong</h1>
+    </div>
+
+    <div class="card__subtitle">
+      <h3>Developer and Designer</h3>
+    </div>
+
+    <div class="card__text">
+      <p>Currently redesigning my website. Come back later! :)</p>
+    </div>
+
+    <div class="card__icons">
+      <a href="http://www.linkedin.com/in/raymondluong" class="js-card__nav"><i class="fa fa-linkedin-square fa-2x social"></i></a>
+
+      <a href="http://github.com/raymondluong" class="js-card__nav"><i class="fa fa-github fa-2x social"></i></a>
+
+      <a href="http://www.instagram.com/instaraymond" class="js-card__nav"><i class="fa fa-instagram fa-2x social"></i></a>
+      
+      <a href="mailto:rayluong92@gmail.com" class="js-card__nav"><i class="fa fa-envelope fa-2x social"></i></a>
+    </div>
+
+   <!--  <div class="card__navs">
+      <div class="card__navs__row">
+        <a href="about.html" class="js-card__nav" id="about">About</a> 
+        <a href="portfolio.html" class="js-card__nav" id="portfolio">Portfolio</a>
+      </div> 
+      <div class="card__navs__row">
+        <a class="js-card__nav" id="blog">Blog</a> 
+        <a class="js-card__nav" id="contact">Contact</a>
+      </div>
+    </div> -->
+
+  </div> 
 
 </div> 
 
+<script src="js/slide.js"></script>
+
 <script>
-var btn = document.querySelector('.button');
-var btnClasses = btn.classList;
-var slider = document.querySelector('.card__slider');
-var sliderClasses = slider.classList;
-btn.addEventListener('click', toggleButton);
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-function toggleButton(event) {
-  if (btnClasses.contains('button--closed')) {
-    btnClasses.remove('button--closed');
-    btnClasses.add('button--open');
-    sliderClasses.remove('card__slider--closed');
-    sliderClasses.add('card__slider--open');
-  } else {
-    btnClasses.add('button--closed');
-    btnClasses.remove('button--open');
-    sliderClasses.add('card__slider--closed');
-    sliderClasses.remove('card__slider--open');
-  }
-
-}
+  ga('create', 'UA-66023241-1', 'auto');
+  ga('send', 'pageview');
 </script>
-
-
-
