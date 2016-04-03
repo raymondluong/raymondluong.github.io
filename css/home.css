@@ -17,17 +17,72 @@ body {
 	background-size: cover;
 }
 
+@media (max-width: 667px) {
+	.container {
+		background: linear-gradient(#358FE3, white);
+	}
+}
+
 .card {
 	padding: 50px;
-	background: rgba(255, 255, 255, .8);
-	box-shadow: 5px 5px 4px rgba(0, 0, 0, .4);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
+	color: #294354;
+	background: rgba(255, 255, 255, .8);
+	box-shadow: 5px 5px 4px rgba(0, 0, 0, .4);
 }
 
-.card__img img{
+@media (max-width: 667px ) {
+	.card {
+		padding: 25px 10px;
+		width: 90%;
+	}
+}
+
+.slide-in {
+	opacity: 0;
+	animation-name: slide-in;
+	animation-duration: .5s;
+	animation-delay: .5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide-in {
+	0% {
+		opacity: 0;
+		transform: translateY(-10%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+.slide-out {
+	animation-name: slide-out;
+	animation-duration: .5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide-out {
+	0% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(-10%);
+	}
+}
+
+.card__img img {
 	height: 100px;
 	border-radius: 50%;
 }
@@ -40,6 +95,10 @@ body {
 	font-weight: normal;
 	font-size: 3em;
 	margin: 0;
+}
+
+.card__subtitle {
+	/*padding-bottom: 50px;*/
 }
 
 .card__subtitle h3 {
@@ -57,15 +116,93 @@ body {
 }
 
 .card__icons a {
-	margin: 0 10px;
+	margin: 0 20px;
 }
 
 .card__icons i {
-	color: black;
+	color: #294354;
 }
 
 .card__icons i:hover {
 	color: #7FC5DE;
+	animation-name: icon-pulse;
+  	animation-duration: 1s;
+  	animation-timing-function: linear;
+  	animation-iteration-count: infinite;
 }
 
-/* Background image from Unsplash - Darrell Cassell */
+@keyframes icon-pulse {
+  25% {
+    transform: scale(1.25);
+  }
+
+  75% {
+    transform: scale(0.75);
+  }
+}
+
+/*.card__navs {
+	display: flex;
+	flex-direction: column;
+	align-items: space-around;
+	width: 100%;
+}
+
+.card__navs__row {
+	display: flex;
+}
+
+.card__navs__row a {
+	width: 50%;
+	flex: 1;
+	padding: 25px 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: inherit;
+}
+
+@media (max-width: 667px) {
+	.card__navs__row a {
+		padding: 10px 0;
+	}
+}
+
+.card__navs__row a:first-child {
+	margin-left: -50px;
+}
+
+@media (max-width: 667px ) {
+	.card__navs__row a:first-child {
+		margin-left: -10px;
+	}
+}
+
+.card__navs__row a:last-child {
+	margin-right: -50px;
+}
+
+@media (max-width: 667px ) {
+	.card__navs__row a:last-child {
+		margin-right: -10px;
+	}
+}
+
+.card__navs__row a:hover {
+	cursor: pointer;
+	background: #F7F6F2;
+	animation-name: pulse;
+  	animation-duration: 1s;
+  	animation-timing-function: linear;
+  	animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  25% {
+    transform: scale(1.05);
+  }
+
+  75% {
+    transform: scale(0.95);
+  }
+}
+*/
