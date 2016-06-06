@@ -324,7 +324,7 @@
 		} else {
 			gridlineColor = getComputedStyle(gridline).stroke;
 			gridlinePresent = true;
-			if (getComputedStyle(gridline).fill === 'none') {
+			if (getComputedStyle(gridline).fill === 'none' && getComputedStyle(gridline).strokeWidth === '0px') {
 				gridlinePresent = false;
 			}
 		}
