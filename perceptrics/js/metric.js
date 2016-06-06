@@ -350,7 +350,7 @@
 			if (dataBackgroundRatios[fillColor] < 4.5) {
 				failingBars.push(bar); 
 			}
-      if (dataGridlineRatios[fillColor] < 4.5) {
+      if (dataGridlineRatios[fillColor] < 4.5 && gridlinePresent) {
         failingGlBars.push(bar);
       }
 		}
@@ -365,6 +365,10 @@
 
     //calculate the total number of comparisons
     var numComparisons = (2*dataBars.length) + 2;
+    if (!gridlinePresent) {
+    	numComparisons = dataBars.length + 1;
+    }
+    console.log(numComparisons);
   
     //calculate percent failing
     var percentFailing = (numFailing/numComparisons) * 100;
