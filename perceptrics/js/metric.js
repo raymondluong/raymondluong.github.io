@@ -319,9 +319,14 @@
 		var len = dist(gridline.x1.baseVal.value, gridline.x2.baseVal.value, gridline.y1.baseVal.value, gridline.y2.baseVal.value);
 		var gridlineColor;
 		if (len < graph.width.baseVal.value / 2) {
-			gridlineColor = graphBackgroundColor
+			gridlinePresent = false;
+			gridlineColor = graphBackgroundColor;
 		} else {
-			gridlineColor = getComputedStyle(gridline).stroke
+			gridlineColor = getComputedStyle(gridline).stroke;
+			gridlinePresent = true;
+			if (getComputedStyle(gridline).fill === 'none') {
+				gridlinePresent = false;
+			}
 		}
 
 		titleBackgroundRatio = getColorContrast(titleColor, graphBackgroundColor);
@@ -385,17 +390,21 @@
 		titleBackgroundResult.innerHTML = `<strong>Title-background ratio</strong>: <span id="title-background-ratio-result">${titleBackgroundRatio}</span>`;
 		colorResults.appendChild(titleBackgroundResult);
 
-		var gridlineBackgroundResult = document.createElement('p');
-		gridlineBackgroundResult.innerHTML = `<strong>Gridline-background ratio</strong>:${gridlineBackgroundRatio}`;
-		colorResults.appendChild(gridlineBackgroundResult);
+		if (gridlinePresent) {
+			var gridlineBackgroundResult = document.createElement('p');
+			gridlineBackgroundResult.innerHTML = `<strong>Gridline-background ratio</strong>:${gridlineBackgroundRatio}`;
+			colorResults.appendChild(gridlineBackgroundResult);
+		}
 
 		var dataBackgroundResult = document.createElement('p');
 		dataBackgroundResult.innerHTML = `<strong>Data-background ratio</strong>: <span id="data-background-ratio-result">${failingBars.length}/${dataBars.length} bars do not meet the standard</span>`;
 		colorResults.appendChild(dataBackgroundResult);
 
-		var dataGridlineResult = document.createElement('p');
-		dataGridlineResult.innerHTML = `<strong>Data-gridline ratio</strong>: ${failingGlBars.length}/${dataBars.length} bars do not meet the standard`;
-		colorResults.appendChild(dataGridlineResult);
+		if (gridlinePresent) {
+			var dataGridlineResult = document.createElement('p');
+			dataGridlineResult.innerHTML = `<strong>Data-gridline ratio</strong>: ${failingGlBars.length}/${dataBars.length} bars do not meet the standard`;
+			colorResults.appendChild(dataGridlineResult);
+		}
 
 		colorResultValues.appendChild(colorResults);
 

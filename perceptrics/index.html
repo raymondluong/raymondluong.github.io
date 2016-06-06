@@ -201,24 +201,6 @@
 
 	<script src="js/tile.js"></script>
 
-	<script>
-		/* disables color btns after pressed and makes other one disappear*/
-		var lightBtn = $("#lighten-background");
-		var darkBtn = $("#darken-data");
-
-		lightBtn.on("click", function() {
-			lightBtn.prop('disabled', true);
-			lightBtn.html("Background lightened!");
-			darkBtn.fadeTo("fast", 0);
-		});
-		
-		darkBtn.on("click", function() {
-			darkBtn.prop('disabled', true);
-			darkBtn.html("Data darkened!");
-			lightBtn.fadeTo("fast", 0);
-		});
-	</script>
-
 	</body>
 </html>
 
