@@ -3,28 +3,24 @@ const pxtorem = require('postcss-pxtorem')
 
 module.exports = {
   siteMetadata: {
-    url: 'https://lumen.netlify.com',
-    title: 'Blog by John Doe',
+    url: 'http://www.raymondluong.com/',
+    title: 'Blog by Raymond Luong',
     subtitle:
-      'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+      'Software Engineer in San Francisco',
     copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
       {
-        label: 'Articles',
+        label: 'Blog',
         path: '/',
       },
       {
         label: 'About me',
         path: '/about/',
       },
-      {
-        label: 'Contact me',
-        path: '/contact/',
-      },
     ],
     author: {
-      name: 'John Doe',
+      name: 'Raymond Luong',
       email: '#',
       telegram: '#',
       twitter: '#',
@@ -33,6 +29,7 @@ module.exports = {
       vk: '#',
     },
   },
+  pathPrefix: '/github username',
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
