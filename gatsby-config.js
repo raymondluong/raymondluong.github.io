@@ -1,12 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
+    title: `Raymond Luong`,
+    author: `Raymond Luong`,
+    bio: 'Software engineer in San Francisco',
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    siteUrl: `http://www.raymondluong.com/`,
   },
   plugins: [
     {
