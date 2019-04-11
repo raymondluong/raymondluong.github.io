@@ -3,7 +3,8 @@ const pxtorem = require('postcss-pxtorem')
 
 module.exports = {
   siteMetadata: {
-    url: 'http://www.raymondluong.com/',
+    url: 'https://www.raymondluong.com/',
+    siteUrl: 'https://www.raymondluong.com/',
     title: 'Blog by Raymond Luong',
     subtitle:
       'Software Engineer in San Francisco',
@@ -29,7 +30,7 @@ module.exports = {
       vk: '#',
     },
   },
-  pathPrefix: '/github username',
+  pathPrefix: '/',
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
@@ -133,7 +134,7 @@ module.exports = {
             {
               site {
                 siteMetadata {
-                  url
+                  siteUrl
                 }
               }
               allSitePage(
@@ -152,7 +153,7 @@ module.exports = {
         serialize: ({ site, allSitePage }) =>
           allSitePage.edges.map(edge => {
             return {
-              url: site.siteMetadata.url + edge.node.path,
+              url: site.siteMetadata.siteUrl + edge.node.path,
               changefreq: 'daily',
               priority: 0.7,
             }
