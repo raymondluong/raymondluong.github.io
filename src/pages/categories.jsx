@@ -12,33 +12,31 @@ class CategoriesRoute extends React.Component {
 
     return (
       <Layout>
-        <div>
-          <Helmet title={`All Categories - ${title}`} />
-          <Sidebar {...this.props} />
-          <div className="content">
-            <div className="content__inner">
-              <div className="page">
-                <h1 className="page__title">Categories</h1>
-                <div className="page__body">
-                  <div className="categories">
-                    <ul className="categories__list">
-                      {categories.map(category => (
-                        <li
-                          key={category.fieldValue}
-                          className="categories__list-item"
+        <Helmet title={`All Categories - ${title}`} />
+        <Sidebar {...this.props} />
+        <div className="content">
+          <div className="content__inner">
+            <div className="page">
+              <h1 className="page__title">Categories</h1>
+              <div className="page__body">
+                <div className="categories">
+                  <ul className="categories__list">
+                    {categories.map(category => (
+                      <li
+                        key={category.fieldValue}
+                        className="categories__list-item"
+                      >
+                        <Link
+                          to={`/categories/${kebabCase(
+                            category.fieldValue
+                          )}/`}
+                          className="categories__list-item-link"
                         >
-                          <Link
-                            to={`/categories/${kebabCase(
-                              category.fieldValue
-                            )}/`}
-                            className="categories__list-item-link"
-                          >
-                            {category.fieldValue} ({category.totalCount})
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                          {category.fieldValue} ({category.totalCount})
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>

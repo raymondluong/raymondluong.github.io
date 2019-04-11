@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import get from 'lodash/get'
 import { Link } from 'gatsby'
 import Menu from '../Menu'
@@ -18,7 +18,7 @@ class Sidebar extends React.Component {
 
     /* eslint-disable jsx-a11y/img-redundant-alt */
     const authorBlock = (
-      <div>
+      <Fragment>
         <Link to="/">
           <img
             src={profilePic}
@@ -42,7 +42,7 @@ class Sidebar extends React.Component {
           </h2>
         )}
         <p className="sidebar__author-subtitle">{subtitle}</p>
-      </div>
+      </Fragment>
     )
     /* eslint-enable jsx-a11y/img-redundant-alt */
 
@@ -50,10 +50,8 @@ class Sidebar extends React.Component {
       <div className="sidebar">
         <div className="sidebar__inner">
           <div className="sidebar__author">{authorBlock}</div>
-          <div>
-            <Menu data={menu} />
-            <Links data={author} />
-          </div>
+          <Menu data={menu} />
+          <Links data={author} />
         </div>
       </div>
     )

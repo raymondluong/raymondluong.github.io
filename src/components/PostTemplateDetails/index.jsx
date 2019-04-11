@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
 import moment from 'moment'
 import Disqus from '../Disqus/Disqus'
@@ -11,11 +11,9 @@ class PostTemplateDetails extends React.Component {
     const tags = post.fields.tagSlugs
 
     const homeBlock = (
-      <div>
-        <Link className="post-single__home-button" to="/">
-          All Articles
-        </Link>
-      </div>
+      <Link className="post-single__home-button" to="/">
+        All Articles
+      </Link>
     )
 
     const tagsBlock = (
@@ -34,16 +32,14 @@ class PostTemplateDetails extends React.Component {
     )
 
     const commentsBlock = (
-      <div>
-        <Disqus
-          postNode={post}
-          siteMetadata={this.props.data.site.siteMetadata}
-        />
-      </div>
+      <Disqus
+        postNode={post}
+        siteMetadata={this.props.data.site.siteMetadata}
+      />
     )
 
     return (
-      <div>
+      <Fragment>
         {homeBlock}
         <div className="post-single">
           <div className="post-single__inner">
@@ -70,7 +66,7 @@ class PostTemplateDetails extends React.Component {
             {commentsBlock}
           </div>
         </div>
-      </div>
+      </Fragment>
     )
   }
 }
