@@ -26,32 +26,35 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-60cc21ca8617754f61f9.js"
+    "url": "webpack-runtime-1d4419e56174da04038f.js"
   },
   {
-    "url": "styles.1025963f4f2ec7abbad4.css"
+    "url": "app-dd418f42a78f2b369b9d.js"
   },
   {
-    "url": "styles-565f081c8374bbda155f.js"
-  },
-  {
-    "url": "app-df4cc0b579fee63ac297.js"
-  },
-  {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-78f9e4dea04737fa062d.js"
+    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-4cccf54412dab7855d79.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "1ade22e04cf41109d7c0a6c1c2a7c7e4"
+    "revision": "36b9058ab1578b2b17e25ad397b7afc4"
   },
   {
-    "url": "component---src-pages-404-js-5b2099f0b46728d74732.js"
+    "url": "styles.e4369d766fe2379cf725.css"
   },
   {
-    "url": "0-84a0c17fb8865c06616b.js"
+    "url": "component---src-pages-404-jsx-90259ebab9c2717534cb.js"
   },
   {
-    "url": "static/d/783/path---404-html-516-62a-2kWlXCHaIrt5yae9NoenmehNuE.json"
+    "url": "2-c7745c75b781c854389c.js"
+  },
+  {
+    "url": "1-0572df43eff0f210c925.js"
+  },
+  {
+    "url": "styles-ba9961f32dca1be70126.js"
+  },
+  {
+    "url": "static/d/928/path---404-html-516-62a-zgOfnytfYHMaifo956gXjyG5c4.json"
   },
   {
     "url": "static/d/604/path---offline-plugin-app-shell-fallback-a-30-c5a-BawJvyh36KKFwbrWPg4a4aYuc8.json"
@@ -75,7 +78,7 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+      const offlineShell = `/github username/offline-plugin-app-shell-fallback/index.html`
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
@@ -147,7 +150,7 @@ const messageApi = {
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `${pathname}`
+        return `/github username${pathname}`
       } else {
         return pathname
       }
