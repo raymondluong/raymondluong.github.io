@@ -8,7 +8,6 @@ module.exports = {
     title: 'Blog by Raymond Luong',
     subtitle:
       'Software Engineer in San Francisco',
-    copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
       {
@@ -22,12 +21,9 @@ module.exports = {
     ],
     author: {
       name: 'Raymond Luong',
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '#',
-      vk: '#',
+      instagram: 'instaraymond',
+      github: 'raymondluong',
+      twitter: 'luongraymond',
     },
   },
   pathPrefix: '/',

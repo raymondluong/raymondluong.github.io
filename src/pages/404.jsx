@@ -35,19 +35,15 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         subtitle
-        copyright
         menu {
           label
           path
         }
         author {
           name
-          email
-          telegram
+          instagram
           twitter
           github
-          rss
-          vk
         }
       }
     }
