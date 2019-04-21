@@ -13,30 +13,16 @@
             &-link {
                 font-size: $typographic-base-font-size;
                 color: $typographic-base-font-color;
-                font-weight: 300;
+                font-weight: 400;
                 border: 0;
-                position: relative;
                 &:hover,
                 &:focus {
                     color: $color-primary;
+                    border-bottom: 1px solid $color-primary;
                 }
                 &--active {
                     color: $color-base;
-                }
-                &--active::before {
-                    content: '> ';
-                }
-                &::after {
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 0;
-                }
-                &:hover::after {
-                    border: 1px solid $color-primary;
-                    width: 100%;
-                    transition: width .25s ease-in-out;
+                    border-bottom: 1px solid $color-base;
                 }
             }
         }

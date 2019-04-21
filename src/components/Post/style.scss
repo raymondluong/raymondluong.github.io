@@ -13,22 +13,10 @@
         @include margin-bottom(.5);
         &-link {
             color: $color-base;
-            position: relative;
             &:hover,
             &:focus {
                 color: $color-base;
-            }
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 0;
-            }
-            &:hover::after {
-                border: 1px solid $color-base;
-                width: 100%;
-                transition: width .25s ease-in-out;
+                border-bottom: 1px solid $color-base;
             }
         }
     }
@@ -63,22 +51,10 @@
     &__readmore {
         font-size: $typographic-base-font-size;
         color: $color-primary;
-        position: relative;
         &:hover,
         &:focus {
             color: $color-primary;
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-        }
-        &:hover::after {
-            border: 1px solid $color-primary;
-            width: 100%;
-            transition: width .25s ease-in-out;
+            border-bottom: 1px solid $color-primary;
         }
     }
 }
