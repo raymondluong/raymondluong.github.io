@@ -1,12 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Raymond Luong]]></title><description><![CDATA[Software Engineer in San Francisco]]></description><link>https://www.raymondluong.com/</link><generator>RSS for Node</generator><lastBuildDate>Fri, 24 May 2019 05:58:33 GMT</lastBuildDate><item><title><![CDATA[Celebrating Pride with CSS]]></title><description><![CDATA[Let's make a rainbow!]]></description><link>https://www.raymondluong.com//blog/celebrating-pride-with-css/</link><guid isPermaLink="false">https://www.raymondluong.com//blog/celebrating-pride-with-css/</guid><pubDate>Thu, 23 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;insert image&lt;/p&gt;
-&lt;p&gt;With Pride month approaching, I want to see if I can add some pizzazz to Hippo, one of the main products I work on at Gusto. Our operations teams use Hippo internally to manage the benefits information for our customers. Each customer is represented as a company in our system and has a corresponding display page. Next to the company’s name, we display list of labels for each state that the company is in. My goal is to turn these drab state labels into a colorful rainbow.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Raymond Luong]]></title><description><![CDATA[Software Engineer in San Francisco]]></description><link>https://www.raymondluong.com/</link><generator>RSS for Node</generator><lastBuildDate>Fri, 24 May 2019 06:54:28 GMT</lastBuildDate><item><title><![CDATA[Celebrating Pride with CSS]]></title><description><![CDATA[Let's make a rainbow!]]></description><link>https://www.raymondluong.com//blog/celebrating-pride-with-css/</link><guid isPermaLink="false">https://www.raymondluong.com//blog/celebrating-pride-with-css/</guid><pubDate>Thu, 23 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;With Pride month approaching, I want to see if I can add some pizzazz to Hippo, one of the  products I work on at Gusto. Our operations teams use Hippo internally to manage the benefits information for our customers. Each customer has a corresponding display page and next to the customer’s name, we display list of labels for each state that the customer operates in. My goal is to turn these drab state labels into a colorful rainbow.&lt;/p&gt;
 &lt;p&gt;Here’s what it currently looks like.&lt;/p&gt;
-&lt;p&gt;insert image&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6149505fd1a68703c96daa3a8d1b0790/de00b/state-labels-gray.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 960px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 10.144927536231883%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAbElEQVQI1z2N4Q6EIAyDff+XMshgQ5zG8yC8TR1L7n40Tbvs63JdihgD9l1QCiNnQq0FIhkpRe9UK8Zodtssp7+Yyf6yuwihtQ+W57kRwurQH2QCJoho8zzHxujmjOMoLtViw4zzrObi6v2LF1wZhk86sjRZAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;State labels&quot;
+        title=&quot;&quot;
+        src=&quot;/static/6149505fd1a68703c96daa3a8d1b0790/f570d/state-labels-gray.png&quot;
+        srcset=&quot;/static/6149505fd1a68703c96daa3a8d1b0790/0783d/state-labels-gray.png 240w,
+/static/6149505fd1a68703c96daa3a8d1b0790/782f4/state-labels-gray.png 480w,
+/static/6149505fd1a68703c96daa3a8d1b0790/f570d/state-labels-gray.png 960w,
+/static/6149505fd1a68703c96daa3a8d1b0790/de00b/state-labels-gray.png 1104w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;p&gt;My first thought is to add CSS helper classes for the different colors and use Ruby to determine when to apply each class. We currently use a Rails view with embedded ruby for the state labels. Here’s a code snippet:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;erb&quot;&gt;&lt;pre class=&quot;language-erb&quot;&gt;&lt;code class=&quot;language-erb&quot;&gt;&lt;span class=&quot;token erb language-erb&quot;&gt;&lt;span class=&quot;token delimiter punctuation&quot;&gt;&amp;lt;%&lt;/span&gt; states&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;state&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token delimiter punctuation&quot;&gt;%&gt;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;span&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;label label-info state&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token erb language-erb&quot;&gt;&lt;span class=&quot;token delimiter punctuation&quot;&gt;&amp;lt;%=&lt;/span&gt; state &lt;span class=&quot;token delimiter punctuation&quot;&gt;%&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;span&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;span&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;label state&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token erb language-erb&quot;&gt;&lt;span class=&quot;token delimiter punctuation&quot;&gt;&amp;lt;%=&lt;/span&gt; state &lt;span class=&quot;token delimiter punctuation&quot;&gt;%&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;span&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;token erb language-erb&quot;&gt;&lt;span class=&quot;token delimiter punctuation&quot;&gt;&amp;lt;%&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;token delimiter punctuation&quot;&gt;%&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;We have our &lt;code class=&quot;language-text&quot;&gt;states&lt;/code&gt; variable which is an array of states, e.g. [‘CA’, ‘NJ’, NY’]. We loop through each state to display a span element with the label, label-info, and state classes and the state name inside the element.&lt;/p&gt;
+&lt;p&gt;We have our &lt;code class=&quot;language-text&quot;&gt;states&lt;/code&gt; variable which is an array of state abbreviations, e.g. &lt;code class=&quot;language-text&quot;&gt;[&amp;#39;CA&amp;#39;, &amp;#39;NJ&amp;#39;, &amp;#39;NY&amp;#39;]&lt;/code&gt;. We loop through each state to display a span element with the label and state classes and the state name inside the element.&lt;/p&gt;
 &lt;p&gt;Let’s say we have the following CSS helper classes. Note that I’m using SASS variables (denoted by the &lt;code class=&quot;language-text&quot;&gt;$&lt;/code&gt;) for readability, but any color value or hex code will work.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.red&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $red &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token selector&quot;&gt;;
 .orange&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $orange &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token selector&quot;&gt;;
@@ -17,11 +49,10 @@
 .violet&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $violet &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ruby has a method called &lt;code class=&quot;language-text&quot;&gt;each_with_index&lt;/code&gt; that gives us the index of the element as the second parameter of the block. It looks like we can use the index to determine the class. For example, an index of 1 would be red, an index of 2 would be orange, and so on.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;erb&quot;&gt;&lt;pre class=&quot;language-erb&quot;&gt;&lt;code class=&quot;language-erb&quot;&gt;&lt;span class=&quot;token erb language-erb&quot;&gt;&lt;span class=&quot;token delimiter punctuation&quot;&gt;&amp;lt;%&lt;/span&gt; states&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;each_with_index &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; index&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token delimiter punctuation&quot;&gt;%&gt;&lt;/span&gt;&lt;/span&gt;
-  # logic here based on the index
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;span&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;label label-info state&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token erb language-erb&quot;&gt;&lt;span class=&quot;token delimiter punctuation&quot;&gt;&amp;lt;%=&lt;/span&gt; state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;freeze &lt;span class=&quot;token delimiter punctuation&quot;&gt;%&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;span&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  # Nest ternary for each color
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;span&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;label state &lt;span class=&quot;token erb language-erb&quot;&gt;&lt;span class=&quot;token delimiter punctuation&quot;&gt;&amp;lt;%=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;index &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;red&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;...&apos;&lt;/span&gt; &lt;span class=&quot;token delimiter punctuation&quot;&gt;%&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token erb language-erb&quot;&gt;&lt;span class=&quot;token delimiter punctuation&quot;&gt;&amp;lt;%=&lt;/span&gt; state &lt;span class=&quot;token delimiter punctuation&quot;&gt;%&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;span&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;token erb language-erb&quot;&gt;&lt;span class=&quot;token delimiter punctuation&quot;&gt;&amp;lt;%&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;token delimiter punctuation&quot;&gt;%&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Functionally this would work, but the more I went down this approach the more I disliked it. It feels a bit heavy handed.&lt;/p&gt;
-&lt;p&gt;Fortunately, we can accomplish this rainbow &lt;strong&gt;entirely with CSS&lt;/strong&gt;. CSS3 added the &lt;code class=&quot;language-text&quot;&gt;nth-child&lt;/code&gt; selector that allows targeting DOM elements based on their position, e.g. the first child.&lt;/p&gt;
+&lt;p&gt;Functionally this would work, but nesting that many ternaries makes the code incredibly hard to read and it feels like we are stuffing too much logic into the view. Fortunately, we can accomplish this rainbow &lt;strong&gt;entirely with CSS&lt;/strong&gt;. CSS3 added the &lt;code class=&quot;language-text&quot;&gt;nth-child&lt;/code&gt; selector that allows targeting DOM elements based on their position, e.g. the first child. We can chain the &lt;code class=&quot;language-text&quot;&gt;nth-child&lt;/code&gt; selector onto the &lt;code class=&quot;language-text&quot;&gt;state&lt;/code&gt; class that we declare in our view.&lt;/p&gt;
 &lt;p&gt;Let’s try this:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.state:nth-child(1n)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $red &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token selector&quot;&gt;.state:nth-child(2n)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $orange &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
@@ -31,10 +62,77 @@
 &lt;span class=&quot;token selector&quot;&gt;.state:nth-child(6n)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $indigo &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token selector&quot;&gt;.state:nth-child(7n)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $violet &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;After refreshing the page, we get this:&lt;/p&gt;
-&lt;p&gt;insert image&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b0a3b5e02e7493af0af29dd0d345daf5/f33be/state-labels-rainbow-7.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 960px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 9.532374100719423%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAkUlEQVQI1z3MOw6CQABFUfe/AWOjFQWGmGBU/KAMDDDDiFqpQFC00cLELVyVwurdvOJ0hNigdUqaxkgZolTy7yxT7VbFiatrc1/ZPI3Fu+rhbvsM1ZzBLKTrLJDjM/WxoRMEa5JEtlAcR+S5wRjdor8vigTlF2z8KbdowmPv8qptlgcHbxcyEhrLExi/5FI0fACd4oQGfG/2qwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;State labels&quot;
+        title=&quot;&quot;
+        src=&quot;/static/b0a3b5e02e7493af0af29dd0d345daf5/f570d/state-labels-rainbow-7.png&quot;
+        srcset=&quot;/static/b0a3b5e02e7493af0af29dd0d345daf5/0783d/state-labels-rainbow-7.png 240w,
+/static/b0a3b5e02e7493af0af29dd0d345daf5/782f4/state-labels-rainbow-7.png 480w,
+/static/b0a3b5e02e7493af0af29dd0d345daf5/f570d/state-labels-rainbow-7.png 960w,
+/static/b0a3b5e02e7493af0af29dd0d345daf5/f33be/state-labels-rainbow-7.png 1112w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;p&gt;It looks like the seven state labels are a rainbow. Great, that was straightforward!&lt;/p&gt;
 &lt;p&gt;To sanity check, let’s test on a company with more than 7 states.&lt;/p&gt;
-&lt;img&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8494681b7d70e87a5e38a4d91d1fe934/09e83/state-labels-off-rainbow.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 960px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 7.526881720430108%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAjUlEQVQI1xXMzRJCUABAYe//GG0aG6opxPVbfsIVCtPUjLHlIU4szu7Mp0hZsJVlCVVV8u5ejJFgCo4sncbvs0cvTzilZGf6xF6/vjV2o7J8VYwspnev2JbANQyUDdnANLlT5BlNWzMmIVNsMQ/nFdS4VCa+fKKKG2k4kOcNXntg/uk4xYMhdPHcgEgI/icEhQr8PDGGAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;State labels&quot;
+        title=&quot;&quot;
+        src=&quot;/static/8494681b7d70e87a5e38a4d91d1fe934/f570d/state-labels-off-rainbow.png&quot;
+        srcset=&quot;/static/8494681b7d70e87a5e38a4d91d1fe934/0783d/state-labels-off-rainbow.png 240w,
+/static/8494681b7d70e87a5e38a4d91d1fe934/782f4/state-labels-off-rainbow.png 480w,
+/static/8494681b7d70e87a5e38a4d91d1fe934/f570d/state-labels-off-rainbow.png 960w,
+/static/8494681b7d70e87a5e38a4d91d1fe934/8d0ff/state-labels-off-rainbow.png 1440w,
+/static/8494681b7d70e87a5e38a4d91d1fe934/09e83/state-labels-off-rainbow.png 1674w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;p&gt;Hmmm, not quite right. It starts off as a rainbow but quickly diverges.&lt;/p&gt;
 &lt;p&gt;I’ll pause here and give you a chance to see if you can spot the bug in my code.&lt;/p&gt;
 &lt;p&gt;—&lt;/p&gt;
@@ -51,9 +149,13 @@
 &lt;li&gt;Green&lt;/li&gt;
 &lt;li&gt;Yellow&lt;/li&gt;
 &lt;li&gt;Blue&lt;/li&gt;
+&lt;li&gt;Red&lt;/li&gt;
+&lt;li&gt;Indigo&lt;/li&gt;
+&lt;li&gt;Red&lt;/li&gt;
+&lt;li&gt;Violet&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;When using &lt;code class=&quot;language-text&quot;&gt;n&lt;/code&gt; in a pattern passed into &lt;code class=&quot;language-text&quot;&gt;nth-child&lt;/code&gt;, the style applies to every element whose position matches that pattern for every positive integer or zero value. For example, looking at &lt;code class=&quot;language-text&quot;&gt;3n&lt;/code&gt;, passing in every positive integer or zero as &lt;code class=&quot;language-text&quot;&gt;n&lt;/code&gt; gives us 0, 3, 6, 9, 12, effectively every third element. &lt;/p&gt;
-&lt;p&gt;How are the colors for this 10-state list determined? The first seven work as expected. The eighth element, the &lt;code class=&quot;language-text&quot;&gt;1n&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;2n&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;4n&lt;/code&gt; rules apply to it, but the &lt;code class=&quot;language-text&quot;&gt;4n&lt;/code&gt; rule is declared later in the CSS file so it wins the specificity test. The ninth and tenth element follow a similar pattern where multiple rules apply but the latest rule wins.&lt;/p&gt;
+&lt;p&gt;How are the colors for this 14-state list determined? The first seven work as expected. The eighth element, the &lt;code class=&quot;language-text&quot;&gt;1n&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;2n&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;4n&lt;/code&gt; rules apply to it, but the &lt;code class=&quot;language-text&quot;&gt;4n&lt;/code&gt; rule is declared later in the CSS file so it wins the CSS specificity test. The ninth element, the &lt;code class=&quot;language-text&quot;&gt;1n&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;3n&lt;/code&gt; rules apply to it but the &lt;code class=&quot;language-text&quot;&gt;3n&lt;/code&gt; rule wins the specificity test. The remaining elements also follow a similar pattern. Note that &lt;code class=&quot;language-text&quot;&gt;1n&lt;/code&gt; effectively becomes the fallback style for every element.&lt;/p&gt;
 &lt;p&gt;Let’s try this again, this time &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child&quot; target=&quot;_blank&quot;&gt;reading the documentation&lt;/a&gt; carefully. The &lt;code class=&quot;language-text&quot;&gt;nth-child&lt;/code&gt; selector accepts an expression of &lt;code class=&quot;language-text&quot;&gt;An + B&lt;/code&gt; where &lt;code class=&quot;language-text&quot;&gt;A&lt;/code&gt; is the length of the repeating pattern and &lt;code class=&quot;language-text&quot;&gt;B&lt;/code&gt; is a shift in the pattern. For our rainbow, we have a repeating pattern of seven colors, so &lt;code class=&quot;language-text&quot;&gt;A&lt;/code&gt; is 7. DOM elements are 1-indexed so &lt;code class=&quot;language-text&quot;&gt;B&lt;/code&gt; is 1 for the first color, 2 for the second color, and so on. Putting this all together, we get:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.state:nth-child(7n+1)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $red &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token selector&quot;&gt;.state:nth-child(7n+2)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $orange &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
@@ -63,5 +165,39 @@
 &lt;span class=&quot;token selector&quot;&gt;.state:nth-child(7n+6)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $indigo &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token selector&quot;&gt;.state:nth-child(7n+7)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $violet &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;And the final result:&lt;/p&gt;
-&lt;img&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f027d530e8e329fdf069c0a008674296/c23a1/state-labels-final-rainbow.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 960px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 6.900726392251816%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAV0lEQVQI1x3FwQpAMBwHYO//EA5yGCWXpaHon202FHPYQUk57iV+tMPXl1g7Q2sZGaPj6nfuG56eI6wFvE9RLy3yjtAIh0sQ3rFC8BmGg4GRRMkV3HTjA27AQcjSHz0rAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;State labels&quot;
+        title=&quot;&quot;
+        src=&quot;/static/f027d530e8e329fdf069c0a008674296/f570d/state-labels-final-rainbow.png&quot;
+        srcset=&quot;/static/f027d530e8e329fdf069c0a008674296/0783d/state-labels-final-rainbow.png 240w,
+/static/f027d530e8e329fdf069c0a008674296/782f4/state-labels-final-rainbow.png 480w,
+/static/f027d530e8e329fdf069c0a008674296/f570d/state-labels-final-rainbow.png 960w,
+/static/f027d530e8e329fdf069c0a008674296/8d0ff/state-labels-final-rainbow.png 1440w,
+/static/f027d530e8e329fdf069c0a008674296/c23a1/state-labels-final-rainbow.png 1652w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;p&gt;Happy Pride!&lt;/p&gt;</content:encoded></item></channel></rss>
