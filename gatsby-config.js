@@ -6,8 +6,7 @@ module.exports = {
     url: 'https://www.raymondluong.com/',
     siteUrl: 'https://www.raymondluong.com/',
     title: 'Blog by Raymond Luong',
-    subtitle:
-      'Software Engineer in San Francisco',
+    subtitle: 'Software Engineer in San Francisco',
     disqusShortname: '',
     menu: [
       {
@@ -21,6 +20,7 @@ module.exports = {
     ],
     author: {
       name: 'Raymond Luong',
+      linkedin: 'raymondluong',
       instagram: 'instaraymond',
       github: 'raymondluong',
       twitter: 'luongraymond',
