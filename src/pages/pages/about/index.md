@@ -1,7 +1,7 @@
 ---
 title: "About me"
 layout: page
-path: "/about"
+path: "/about/"
 ---
 
 Hello! I'm a software engineer who enjoys front-end development and UI/UX design.
