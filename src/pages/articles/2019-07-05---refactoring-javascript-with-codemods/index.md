@@ -1,14 +1,14 @@
 ---
-title: Getting Started with Codemods in JavaScript
+title: Refactoring JavaScript with Codemods
 date: '2019-07-05'
 layout: post
 draft: false
-path: "/blog/getting-started-with-codemods-in-javascript/"
+path: "/blog/refactoring-javascript-with-codemods/"
 category: "Front End"
 tags:
   - "JavaScript"
   - "Codemods"
-description: "Codemods are a handy tool to automate large-scale changes. In this article, I'll share more about codemods, walk through a simple codemod that I wrote, and share some tips for debugging."
+description: "Codemods are handy for automating large-scale changes. In this article, I'll share more about codemods, walk through a simple codemod that I wrote, and share some tips for debugging."
 ---
 
 One of the most exciting parts about working with JavaScript is the fast-paced nature of the ecosystem. New patterns and standards evolve over time. However, keeping up with the changes can be complex and time-consuming because they may involve large-scale modifications or refactors that are a bit more involved than a simple find-and-replace. 
