@@ -45,7 +45,6 @@ export const pageQuery = graphql`
           name
           linkedin
           instagram
-          twitter
           github
         }
       }

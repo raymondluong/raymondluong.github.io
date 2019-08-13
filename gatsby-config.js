@@ -23,7 +23,6 @@ module.exports = {
       linkedin: 'raymondluong',
       instagram: 'instaraymond',
       github: 'raymondluong',
-      twitter: 'luongraymond',
     },
   },
   pathPrefix: '/',
