@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     url: 'https://www.raymondluong.com/',
     siteUrl: 'https://www.raymondluong.com/',
-    title: 'Blog by Raymond Luong',
+    title: 'Raymond Luong',
     subtitle: 'Software Engineer in San Francisco',
     disqusShortname: '',
     menu: [
