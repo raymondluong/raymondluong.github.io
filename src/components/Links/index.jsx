@@ -9,6 +9,7 @@ class Links extends React.Component {
       linkedin: author.linkedin,
       github: author.github,
       instagram: author.instagram,
+      twitter: author.twitter,
     }
 
     return (
@@ -39,6 +40,15 @@ class Links extends React.Component {
               rel="noopener noreferrer"
             >
               <i className="icon-instagram" />
+            </a>
+          </li>
+          <li className="links__list-item">
+            <a
+              href={`https://www.twitter.com/${links.twitter}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="icon-twitter" />
             </a>
           </li>
         </ul>
