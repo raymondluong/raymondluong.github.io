@@ -42,3 +42,5 @@ It was easy for me to get started with exploring TypeScript — I just had to op
 Lastly, I’m looking forward to wearing these awesome TypeScript socks that were included in the goodie bag. My current company Gusto has a shoeless office — a perfect chance to show them off!
 
 ![TypeScript socks](./typescript-socks.png)
+
+Edit (11/5/19): A day after I published this, <a href="https://twitter.com/typescript/status/1191766259035189249" target="_blank">TypeScript 3.7 launched</a> out of beta! I like to think that my excitement had something to do with it 😄
