@@ -4,10 +4,17 @@ layout: page
 path: "/about/"
 ---
 
-Hello! My name is Raymond. I'm a mission-driven software engineer interested in making an impact and using technology to improve the lives of others. I prefer working on the front end and take pride in creating delightful user experiences.
+Hi! My name is Raymond. I'm a mission-driven software engineer interested in making an impact and using technology to improve the lives of others. <strong>I most enjoy working on the front end!</strong> (though I have worked across the stack and can put on other hats when necessary). I take a human-centered approach to software development and I believe in iteration and feedback over pefection.
 
-Technologies I enjoy working with: JavaScript, React, Redux, Ruby on Rails, Flow, TypeScript, Gatsby, HTML, CSS, Git, Figma, and Sketch.
+Technologies I have experience with (or, a bunch of buzzwords): JavaScript, React, Redux, Ruby on Rails, TypeScript/Flow, Gatsby, HTML, CSS, Git, and Figma/Sketch.
 
-Currently I'm a full-stack engineer on the <a href="https://gusto.com/product/benefits" target="_blank">Benefits team at Gusto</a>. Our mission is to build a world-class experience to help small businesses offer over 11 different types of benefits to their employees. Everyday we’re dreaming of ways to level up our benefits offering by making it more affordable, accessible, guided, personalized, and seamless. We make our mission a reality by building recommendation systems for our customers, building automation for our operations teams, integrating with partners, supporting new regulations aimed at helping small businesses, and much much more.
+Currently I'm a full-stack engineer on the <a href="https://gusto.com/product/benefits" target="_blank">Benefits team at Gusto</a>. I work on delightful features to make healthcare more accessible to small businesses and their employees.
 
-Prior to Gusto, I studied Computer Science and Human-Computer Interaction at Stanford. Originally from New York, I first came to California for school and fell in love with the weather and culture. I currently reside in San Francisco and in my free time, I enjoy yoga, reading, hiking, edm, and board games.
+Prior to Gusto, I studied Computer Science and Human-Computer Interaction at Stanford. Originally from New York, I first came to California for school and decided that sun is better than snow so I stuck around after graduation. I currently reside in San Francisco and in my free time, I enjoy yoga, hiking, <a href="https://www.goodreads.com/user/show/89704424-raymond-luong" target="_blank">reading</a>, edm, and travel. I'm always down to chat about JavaScript ( 🤓), the works of Haruki Murakami, dairy-free alternatives, and the best group fitness classes in SF (spoiler alert: it's Barry's Bootcamp).
+
+Thanks for reading! Here's a picture of me petting an incredibly soft llama:
+
+![Me petting a llama](./llama.png)
+
+
+
