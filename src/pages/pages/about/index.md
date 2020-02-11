@@ -4,9 +4,14 @@ layout: page
 path: "/about/"
 ---
 
-Hi! My name is Raymond. I'm a mission-driven software engineer interested in making an impact and using technology to improve the lives of others. <strong>I most enjoy working on the front end!</strong> (though I have worked across the stack and can put on other hats when necessary). I take a human-centered approach to software development and I believe in iteration and feedback over pefection.
+Hi! My name is Raymond. I'm a mission-driven software engineer interested in using technology to solve problems and improve the lives of others. <strong>I most enjoy working on the front end!</strong> (though I have worked across the stack and can put on other hats when necessary). I take a human-centered approach to software development and I believe in iteration and feedback over perfection.
 
-Technologies I have experience with (or, a bunch of buzzwords): JavaScript, React, Redux, Ruby on Rails, TypeScript/Flow, Gatsby, HTML, CSS, Git, and Figma/Sketch.
+Technologies I have experience with (or, a bunch of buzzwords):
+- JavaScript, HTML, CSS
+- React, Redux, TypeScript, Flow
+- Jest, React Testing Library, Enzyme
+- Ruby on Rails, RSpec
+- Figma, Sketch
 
 Currently I'm a full-stack engineer on the <a href="https://gusto.com/product/benefits" target="_blank">Benefits team at Gusto</a>. I work on delightful features to make healthcare more accessible to small businesses and their employees.
 
