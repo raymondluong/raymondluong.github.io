@@ -4,7 +4,7 @@ layout: page
 path: "/about/"
 ---
 
-Hi! My name is Raymond. I'm a mission-driven software engineer interested in using technology to solve problems and improve the lives of others. <strong>I most enjoy working on the front end!</strong> (though I have worked across the stack and can put on other hats when necessary). I take a human-centered approach to software development and I believe in iteration and feedback over perfection.
+Hi! My name is Raymond. I'm a mission-driven software engineer interested in using technology to solve problems and improve the lives of others. I take a human-centered and pragmatic approach to software development and I believe in iteration and feedback over perfection. <strong>I most enjoy working on the front end</strong>, though I have worked across the stack and can put on other hats if necessary.
 
 Technologies I have experience with (or, a bunch of buzzwords):
 - JavaScript, HTML, CSS
