@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Raymond Luong]]></title><description><![CDATA[Software Engineer in San Francisco]]></description><link>https://www.raymondluong.com/</link><generator>RSS for Node</generator><lastBuildDate>Thu, 13 Feb 2020 05:59:59 GMT</lastBuildDate><item><title><![CDATA[TSConf Takeaways]]></title><description><![CDATA[Key takeaways, what I’m excited about going forward, and a comfy pair of socks.]]></description><link>https://www.raymondluong.com//blog/tsconf-takeaways/</link><guid isPermaLink="false">https://www.raymondluong.com//blog/tsconf-takeaways/</guid><pubDate>Mon, 04 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Last month, I had the privilege of flying to Seattle and attending &lt;a href=&quot;https://tsconf.io&quot; target=&quot;_blank&quot;&gt;TSConf&lt;/a&gt;, a one-day single-track conference all about TypeScript! I want to share some of my key takeaways and what I’m excited about going forward.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Raymond Luong]]></title><description><![CDATA[Software Engineer in San Francisco]]></description><link>https://www.raymondluong.com/</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 24 Mar 2020 02:42:53 GMT</lastBuildDate><item><title><![CDATA[Onboarding New Engineers]]></title><description><![CDATA[How we onboard new engineers at Gusto!]]></description><link>https://www.raymondluong.com//blog/onboarding-new-engineers-with-gusto/</link><guid isPermaLink="false">https://www.raymondluong.com//blog/onboarding-new-engineers-with-gusto/</guid><pubDate>Mon, 23 Mar 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Wrote a post about onboarding new engineers for the Gusto Engineering blog with my awesome co-worker Brittney Johnson! &lt;a href=&quot;https://engineering.gusto.com/onboards-new-engineers-withgusto/&quot; target=&quot;_blank&quot;&gt;Read it here.&lt;a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[TSConf Takeaways]]></title><description><![CDATA[Key takeaways, what I’m excited about going forward, and a comfy pair of socks.]]></description><link>https://www.raymondluong.com//blog/tsconf-takeaways/</link><guid isPermaLink="false">https://www.raymondluong.com//blog/tsconf-takeaways/</guid><pubDate>Mon, 04 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Last month, I had the privilege of flying to Seattle and attending &lt;a href=&quot;https://tsconf.io&quot; target=&quot;_blank&quot;&gt;TSConf&lt;/a&gt;, a one-day single-track conference all about TypeScript! I want to share some of my key takeaways and what I’m excited about going forward.&lt;/p&gt;
 &lt;h2&gt;Start with the Problem&lt;/h2&gt;
 &lt;p&gt;My first takeaway is from Lauren Tan, an engineer manager at Netflix. The main theme of her talk was the importance of starting with a problem and then finding the right technology to solve that problem. Sometimes, as engineers, we’ll learn about a shiny new technology and try to find a way to use it on our team, yet run into issues convincing other folks to hop aboard because it doesn’t have a real business impact or it solves a manufactured problem.&lt;/p&gt;
 &lt;p&gt;For example, a problem with vanilla JavaScript can be the difficulty of reading the shape of data, especially for more complex objects, and the lost developer velocity from trying to understand that data. TypeScript can help solve that problem because types improve the readability of the code and add type safety, which in turn help catch bugs earlier and increase developer productivity. &lt;/p&gt;
@@ -15,7 +15,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/980c38478d8d4c3552737805cde399d9/b2ba1/typescript-socks.png&quot;
+    href=&quot;/static/980c38478d8d4c3552737805cde399d9/3f520/typescript-socks.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -27,16 +27,16 @@
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 114.21052631578948%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
+      style=&quot;padding-bottom: 114.16666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;TypeScript socks&quot;
         title=&quot;&quot;
-        src=&quot;/static/980c38478d8d4c3552737805cde399d9/b2ba1/typescript-socks.png&quot;
-        srcset=&quot;/static/980c38478d8d4c3552737805cde399d9/0783d/typescript-socks.png 240w,
-/static/980c38478d8d4c3552737805cde399d9/b2ba1/typescript-socks.png 380w&quot;
+        src=&quot;/static/980c38478d8d4c3552737805cde399d9/3f520/typescript-socks.png&quot;
+        srcset=&quot;/static/980c38478d8d4c3552737805cde399d9/8ff5a/typescript-socks.png 240w,
+/static/980c38478d8d4c3552737805cde399d9/3f520/typescript-socks.png 380w&quot;
         sizes=&quot;(max-width: 380px) 100vw, 380px&quot;
       /&gt;
     &lt;/span&gt;
@@ -60,7 +60,7 @@
 &lt;h2&gt;Context&lt;/h2&gt;
 &lt;p&gt;At Gusto, we added ESLint to our codebase after we had already written a bunch of React components. However, some of our existing components did not match the ESLint rules that we decided to enforce. To avoid having those errors block us from adding ESLint, we suppressed the existing errors and added ESLint so it could immediately start having value for our new code going forward.&lt;/p&gt;
 &lt;p&gt;One of the errors we suppressed is &lt;code class=&quot;language-text&quot;&gt;react/destructuring-assignment&lt;/code&gt;, which prefers using &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment&quot; target=&quot;_blank&quot;&gt;ES6 destructuring syntax&lt;/a&gt; when possible. For example:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; mailingAddress&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; address &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; mailingAddress&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; address &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;is preferred to&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; address &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;mailingAddress&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;There are a bunch of components in our codebase that do not destructure and have the destructuring-assignment rule suppressed. I’ll walk through a codemod I wrote to address the specific case above. Note that this is just one example and it doesn’t cover &lt;em&gt;all&lt;/em&gt; the violations of the destructuring-assignment rule. When writing codemods, I’ve found that it’s simplest to start with the basic cases and gradually add on more complex cases.&lt;/p&gt;
@@ -85,7 +85,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/6c8b0f302ebe55279374380804a79a66/032d8/step1-ast.png&quot;
+    href=&quot;/static/6c8b0f302ebe55279374380804a79a66/b5c21/step1-ast.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -97,20 +97,20 @@
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 59.70287836583101%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABQElEQVQoz52Sa2rDMBCEc/97tYEeIMTkZUmWLevtlORHa3m6UhKapBTqGoZdtPBptOPF+f2M45BwOiWcjycMw4AYY6kfnyNelm94XS5RbQ6oa4aat+CsBuMSh1qUfs9aMMaKFmMa8duX0oQYArq2wY5zbLmA6DSMybLQ2sBoTTX3GtZaApKLaQJp+qGUEgIBvfdoO4kNAStp0REsn8UYyjxfGq5ajOPF4Q1y6y8Ov4ExDnA9I4ccQvcYroA8u9ffgFnOQbV7bIXESlgcOgtDZ/fQWQ5DiLBaQvIV1kJj3RhoenoIGRbmA324QtUeUnFIY8ruLiA/f4e5OkvpKgaVU3b+Yfa/JxOsbSqspcKuU3DePcBmO7Smg1Y1JKWsSyD+IZAZwJx0hCegMarA4lO6M4AEchZ931AQtvxCz7u7h34BVjWX8ohXw+MAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+      style=&quot;padding-bottom: 59.583333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABQElEQVQoz52Sa2rDMBCEc/97tYEeIMTkZUmWLevtlORHa3m6UhKapBTqGoZdtPBptOPF+f2M45BwOiWcjycMw4AYY6kfnyNelm94XS5RbQ6oa4aat+CsBuMSh1qUfs9aMMaKFmMa8duX0oQYArq2wY5zbLmA6DSMybLQ2sBoTTX3GtZaApKLaQJp+qGUEgIBvfdoO4kNAStp0REsn8UYyjxfGq5ajOPF4Q1y6y8Ov4ExDnA9I4ccQvcYroA8u9ffgFnOQbV7bIXESlgcOgtDZ/fQWQ5DiLBaQvIV1kJj3RhoenoIGRbmA324QtUeUglIY8ruLiA/f4e5OkvpKgaVU3b+Yfa/JxOsbSqspcKuU3DePcBmO7Smg1Y1JKWsSyD+IZAZwJx0hCegMarA4lO6M4AEchZ931AQtvxCz7u7h34BV+SX89X7k9kAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;AST part 1&quot;
         title=&quot;&quot;
-        src=&quot;/static/6c8b0f302ebe55279374380804a79a66/f570d/step1-ast.png&quot;
-        srcset=&quot;/static/6c8b0f302ebe55279374380804a79a66/0783d/step1-ast.png 240w,
-/static/6c8b0f302ebe55279374380804a79a66/782f4/step1-ast.png 480w,
-/static/6c8b0f302ebe55279374380804a79a66/f570d/step1-ast.png 960w,
-/static/6c8b0f302ebe55279374380804a79a66/8d0ff/step1-ast.png 1440w,
-/static/6c8b0f302ebe55279374380804a79a66/a987b/step1-ast.png 1920w,
-/static/6c8b0f302ebe55279374380804a79a66/032d8/step1-ast.png 2154w&quot;
+        src=&quot;/static/6c8b0f302ebe55279374380804a79a66/d9199/step1-ast.png&quot;
+        srcset=&quot;/static/6c8b0f302ebe55279374380804a79a66/8ff5a/step1-ast.png 240w,
+/static/6c8b0f302ebe55279374380804a79a66/e85cb/step1-ast.png 480w,
+/static/6c8b0f302ebe55279374380804a79a66/d9199/step1-ast.png 960w,
+/static/6c8b0f302ebe55279374380804a79a66/07a9c/step1-ast.png 1440w,
+/static/6c8b0f302ebe55279374380804a79a66/29114/step1-ast.png 1920w,
+/static/6c8b0f302ebe55279374380804a79a66/b5c21/step1-ast.png 2154w&quot;
         sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
       /&gt;
     &lt;/span&gt;
@@ -124,21 +124,21 @@
 &lt;p&gt;If this is hard to see, you can open the &lt;a href=&quot;https://astexplorer.net/&quot; target=&quot;_blank&quot;&gt;AST Explorer&lt;/a&gt; and hover over different parts of the input code, which will highlight the corresponding AST nodes on the right side.&lt;/p&gt;
 &lt;p&gt;We can use the &lt;code class=&quot;language-text&quot;&gt;find&lt;/code&gt; method from jscodeshift and pass in a pattern based on what we see in the AST explorer. Here’s what that looks like:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; instances &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; root&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;j&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;VariableDeclarator&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Identifier&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  id&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Identifier&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  init&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    object&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;MemberExpression&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-      object&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;ThisExpression&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  init&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    object&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;MemberExpression&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      object&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;ThisExpression&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
       &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-      property&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        name&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;props&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      property&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;props&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
       &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    property&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Identifier&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    property&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Identifier&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -170,7 +170,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/6a559e5463d4442b3b5a6cfb3bbff92d/e0a38/step2-ast.png&quot;
+    href=&quot;/static/6a559e5463d4442b3b5a6cfb3bbff92d/037ab/step2-ast.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -182,20 +182,20 @@
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 62.44503078276165%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABOUlEQVQoz6WS/U7CMBTFef+3Ut+AhBAjc+3Kunb9GoSNicmOt9UKU/4QbHJyuyznl9N77+J0PKE/9DiQ9ntgt5/wNr5jHEYUTODh8QnL1TM2RQEmJKqKg4sarKpRcU5VglOVUsIYgwVmZ5p9DccR3gcCbbHaFFhzDanaZGyNnVVrLUIIWEzThLPwfY+n73s457DrAlpd44WVqFQ0dujIHAG5RnnvP4Ep23ROl+/DMCSg/zJEqKg5XhsFR+YMyUoJceX8BIbgUyrvWmjFwJWCpGf6C2hO+UdgSEBnGsi6wEY2YATN/+4EBjiroIyC9bGv3S/YzU82qoQQazCtZ727K2Fcn9hDb2qYnDqBbk0YTSTbSghamVIFNK27OpAbEnaweostX2LJJcrG/BdIA3GWoBUNRc928BIW9QHMAJgnBYZ4UAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+      style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABU0lEQVQ4y6WTW0vDQBCF+///lAg+CT6UUh8kptnNZe+blWhbmprjbExrTBVSXRj2Oh9nOLOL7esWTdNQdAihw37XYv+2g/MBN7d3uH9Y4ilJkbEcGS/BOcOGCzDGwXg8q2jNoJSClBIL/DKOx3fUdUAlFR6TBKs0x3OhobSCNhZaa5rNee2cI0EBi67rMI04DocDvKdHdQ1vJFi+QVpWsC7ghRJrOo8R78Ow995/KjxBxuu2bfsH3te9UmM08jwllQWY0mfANC5KngJPiXF2uoRQFSoqsx4A4/sYs4CnJCMzMCGQCImCTOih/wFqyVCpAsJa6oJLdTOBQ6IzEHxFxjBIO5j1t5K/krzOqU0kjPsO8tcpJDOc6XtO2gBl4/5nQ2YCA7xVqPga66zAMqPSte2Vx5a6HjhAnS7oa21QktJxD45hs0vuW0ak5HDZGzJt6jHwA6Zl4x52PTrtAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;AST part 2&quot;
         title=&quot;&quot;
-        src=&quot;/static/6a559e5463d4442b3b5a6cfb3bbff92d/f570d/step2-ast.png&quot;
-        srcset=&quot;/static/6a559e5463d4442b3b5a6cfb3bbff92d/0783d/step2-ast.png 240w,
-/static/6a559e5463d4442b3b5a6cfb3bbff92d/782f4/step2-ast.png 480w,
-/static/6a559e5463d4442b3b5a6cfb3bbff92d/f570d/step2-ast.png 960w,
-/static/6a559e5463d4442b3b5a6cfb3bbff92d/8d0ff/step2-ast.png 1440w,
-/static/6a559e5463d4442b3b5a6cfb3bbff92d/a987b/step2-ast.png 1920w,
-/static/6a559e5463d4442b3b5a6cfb3bbff92d/e0a38/step2-ast.png 2274w&quot;
+        src=&quot;/static/6a559e5463d4442b3b5a6cfb3bbff92d/d9199/step2-ast.png&quot;
+        srcset=&quot;/static/6a559e5463d4442b3b5a6cfb3bbff92d/8ff5a/step2-ast.png 240w,
+/static/6a559e5463d4442b3b5a6cfb3bbff92d/e85cb/step2-ast.png 480w,
+/static/6a559e5463d4442b3b5a6cfb3bbff92d/d9199/step2-ast.png 960w,
+/static/6a559e5463d4442b3b5a6cfb3bbff92d/07a9c/step2-ast.png 1440w,
+/static/6a559e5463d4442b3b5a6cfb3bbff92d/29114/step2-ast.png 1920w,
+/static/6a559e5463d4442b3b5a6cfb3bbff92d/037ab/step2-ast.png 2274w&quot;
         sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
       /&gt;
     &lt;/span&gt;
@@ -244,7 +244,7 @@
   &lt;span class=&quot;token comment&quot;&gt;// other interesting behavior&lt;/span&gt;
   &lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      address&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; mailingAddress
+      address&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; mailingAddress
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
       &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
@@ -257,7 +257,7 @@
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;It’s &lt;em&gt;almost&lt;/em&gt; what we expect, but there are line breaks inside the object. Upon digging into the &lt;a href=&quot;https://github.com/benjamn/recast/blob/52a7ec3eaaa37e78436841ed8afc948033a86252/lib/printer.js#L575&quot; target=&quot;_blank&quot;&gt;recast library&lt;/a&gt; that jscodeshift uses to print, it looks like line breaks are built in to how &lt;code class=&quot;language-text&quot;&gt;ObjectPattern&lt;/code&gt; is printed.&lt;/p&gt;
 &lt;p&gt;Additionally, if we have a case where the variable name and prop name are the same, ESLint will complain further that we can use the object shorthand syntax:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; address&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; address &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt; props&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Angry ESLint&lt;/span&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; address&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; address &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt; props&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Angry ESLint&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; address &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Happy ESLint&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Fortunately, both of these issues can be fixed with ESLint’s fix option. The shorthand error can also be addressed by extending our codemod — the &lt;code class=&quot;language-text&quot;&gt;ObjectPattern&lt;/code&gt; type accepts a shorthand parameter that applies if the variable name and prop name are the same. However, since we’ll be using the ESLint auto-fix feature anyway, I’d prefer to just let ESLint fix it for us.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;eslint --fix ~/path/to/component.jsx&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -287,21 +287,21 @@
 
   &lt;span class=&quot;token comment&quot;&gt;// Step 1: Find all instances of the code to change&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; instances &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; root&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;j&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;VariableDeclarator&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Identifier&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    id&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Identifier&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    init&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      object&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;MemberExpression&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-        object&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-          type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;ThisExpression&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    init&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      object&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;MemberExpression&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        object&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;ThisExpression&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
         &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-        property&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-          name&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;props&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        property&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;props&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
         &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
       &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-      property&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Identifier&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      property&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Identifier&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
       &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -330,7 +330,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/6149505fd1a68703c96daa3a8d1b0790/de00b/state-labels-gray.png&quot;
+    href=&quot;/static/6149505fd1a68703c96daa3a8d1b0790/7388e/state-labels-gray.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -342,18 +342,18 @@
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 10.144927536231883%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAbElEQVQI1z2N4Q6EIAyDff+XMshgQ5zG8yC8TR1L7n40Tbvs63JdihgD9l1QCiNnQq0FIhkpRe9UK8Zodtssp7+Yyf6yuwihtQ+W57kRwurQH2QCJoho8zzHxujmjOMoLtViw4zzrObi6v2LF1wZhk86sjRZAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+      style=&quot;padding-bottom: 10%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAbElEQVQI1z2N4Q6EIAyDff+XMshgQ5zG8yC8TR1L7n40Tbvs63JdihgD9l1QCiNnQq0FIhkpRe9UK8Zodtssp7+Yyf6yuwihtQ+W57kRwurQH2QCJoho8zzHxujmjOMoLtViw4zzrObi6v2LF1wZhk86sjRZAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;State labels&quot;
         title=&quot;&quot;
-        src=&quot;/static/6149505fd1a68703c96daa3a8d1b0790/f570d/state-labels-gray.png&quot;
-        srcset=&quot;/static/6149505fd1a68703c96daa3a8d1b0790/0783d/state-labels-gray.png 240w,
-/static/6149505fd1a68703c96daa3a8d1b0790/782f4/state-labels-gray.png 480w,
-/static/6149505fd1a68703c96daa3a8d1b0790/f570d/state-labels-gray.png 960w,
-/static/6149505fd1a68703c96daa3a8d1b0790/de00b/state-labels-gray.png 1104w&quot;
+        src=&quot;/static/6149505fd1a68703c96daa3a8d1b0790/d9199/state-labels-gray.png&quot;
+        srcset=&quot;/static/6149505fd1a68703c96daa3a8d1b0790/8ff5a/state-labels-gray.png 240w,
+/static/6149505fd1a68703c96daa3a8d1b0790/e85cb/state-labels-gray.png 480w,
+/static/6149505fd1a68703c96daa3a8d1b0790/d9199/state-labels-gray.png 960w,
+/static/6149505fd1a68703c96daa3a8d1b0790/7388e/state-labels-gray.png 1104w&quot;
         sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
       /&gt;
     &lt;/span&gt;
@@ -392,7 +392,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/b0a3b5e02e7493af0af29dd0d345daf5/f33be/state-labels-rainbow-7.png&quot;
+    href=&quot;/static/b0a3b5e02e7493af0af29dd0d345daf5/3fca6/state-labels-rainbow-7.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -404,18 +404,18 @@
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 9.532374100719423%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAkUlEQVQI1z3MOw6CQABFUfe/AWOjFQWGmGBU/KAMDDDDiFqpQFC00cLELVyVwurdvOJ0hNigdUqaxkgZolTy7yxT7VbFiatrc1/ZPI3Fu+rhbvsM1ZzBLKTrLJDjM/WxoRMEa5JEtlAcR+S5wRjdor8vigTlF2z8KbdowmPv8qptlgcHbxcyEhrLExi/5FI0fACd4oQGfG/2qwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+      style=&quot;padding-bottom: 9.583333333333332%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAkUlEQVQI1z3MOw6CQABFUfe/AWOjFQWGmGBU/KAMDDDDiFqpQFC00cLELVyVwurdvOJ0hNigdUqaxkgZolTy7yxT7VbFiatrc1/ZPI3Fu+rhbvsM1ZzBLKTrLJDjM/WxoRMEa5JEtlAcR+S5wRjdor8vigTlF2z8KbdowmPv8qptlgcHbxcyEhrLExi/5FI0fACd4oQGfG/2qwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;State labels&quot;
         title=&quot;&quot;
-        src=&quot;/static/b0a3b5e02e7493af0af29dd0d345daf5/f570d/state-labels-rainbow-7.png&quot;
-        srcset=&quot;/static/b0a3b5e02e7493af0af29dd0d345daf5/0783d/state-labels-rainbow-7.png 240w,
-/static/b0a3b5e02e7493af0af29dd0d345daf5/782f4/state-labels-rainbow-7.png 480w,
-/static/b0a3b5e02e7493af0af29dd0d345daf5/f570d/state-labels-rainbow-7.png 960w,
-/static/b0a3b5e02e7493af0af29dd0d345daf5/f33be/state-labels-rainbow-7.png 1112w&quot;
+        src=&quot;/static/b0a3b5e02e7493af0af29dd0d345daf5/d9199/state-labels-rainbow-7.png&quot;
+        srcset=&quot;/static/b0a3b5e02e7493af0af29dd0d345daf5/8ff5a/state-labels-rainbow-7.png 240w,
+/static/b0a3b5e02e7493af0af29dd0d345daf5/e85cb/state-labels-rainbow-7.png 480w,
+/static/b0a3b5e02e7493af0af29dd0d345daf5/d9199/state-labels-rainbow-7.png 960w,
+/static/b0a3b5e02e7493af0af29dd0d345daf5/3fca6/state-labels-rainbow-7.png 1112w&quot;
         sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
       /&gt;
     &lt;/span&gt;
@@ -428,7 +428,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8494681b7d70e87a5e38a4d91d1fe934/09e83/state-labels-off-rainbow.png&quot;
+    href=&quot;/static/8494681b7d70e87a5e38a4d91d1fe934/569c6/state-labels-off-rainbow.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -440,19 +440,19 @@
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 7.526881720430108%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAjUlEQVQI1xXMzRJCUABAYe//GG0aG6opxPVbfsIVCtPUjLHlIU4szu7Mp0hZsJVlCVVV8u5ejJFgCo4sncbvs0cvTzilZGf6xF6/vjV2o7J8VYwspnev2JbANQyUDdnANLlT5BlNWzMmIVNsMQ/nFdS4VCa+fKKKG2k4kOcNXntg/uk4xYMhdPHcgEgI/icEhQr8PDGGAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+      style=&quot;padding-bottom: 7.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAjUlEQVQI1xXMzRJCUABAYe//GG0aG6opxPVbfsIVCtPUjLHlIU4szu7Mp0hZsJVlCVVV8u5ejJFgCo4sncbvs0cvTzilZGf6xF6/vjV2o7J8VYwspnev2JbANQyUDdnANLlT5BlNWzMmIVNsMQ/nFdS4VCa+fKKKG2k4kOcNXntg/uk4xYMhdPHcgEgI/icEhQr8PDGGAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;State labels&quot;
         title=&quot;&quot;
-        src=&quot;/static/8494681b7d70e87a5e38a4d91d1fe934/f570d/state-labels-off-rainbow.png&quot;
-        srcset=&quot;/static/8494681b7d70e87a5e38a4d91d1fe934/0783d/state-labels-off-rainbow.png 240w,
-/static/8494681b7d70e87a5e38a4d91d1fe934/782f4/state-labels-off-rainbow.png 480w,
-/static/8494681b7d70e87a5e38a4d91d1fe934/f570d/state-labels-off-rainbow.png 960w,
-/static/8494681b7d70e87a5e38a4d91d1fe934/8d0ff/state-labels-off-rainbow.png 1440w,
-/static/8494681b7d70e87a5e38a4d91d1fe934/09e83/state-labels-off-rainbow.png 1674w&quot;
+        src=&quot;/static/8494681b7d70e87a5e38a4d91d1fe934/d9199/state-labels-off-rainbow.png&quot;
+        srcset=&quot;/static/8494681b7d70e87a5e38a4d91d1fe934/8ff5a/state-labels-off-rainbow.png 240w,
+/static/8494681b7d70e87a5e38a4d91d1fe934/e85cb/state-labels-off-rainbow.png 480w,
+/static/8494681b7d70e87a5e38a4d91d1fe934/d9199/state-labels-off-rainbow.png 960w,
+/static/8494681b7d70e87a5e38a4d91d1fe934/07a9c/state-labels-off-rainbow.png 1440w,
+/static/8494681b7d70e87a5e38a4d91d1fe934/569c6/state-labels-off-rainbow.png 1674w&quot;
         sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
       /&gt;
     &lt;/span&gt;
@@ -495,7 +495,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/f027d530e8e329fdf069c0a008674296/c23a1/state-labels-final-rainbow.png&quot;
+    href=&quot;/static/f027d530e8e329fdf069c0a008674296/807a0/state-labels-final-rainbow.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -507,19 +507,19 @@
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 6.900726392251816%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAV0lEQVQI1x3FwQpAMBwHYO//EA5yGCWXpaHon202FHPYQUk57iV+tMPXl1g7Q2sZGaPj6nfuG56eI6wFvE9RLy3yjtAIh0sQ3rFC8BmGg4GRRMkV3HTjA27AQcjSHz0rAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+      style=&quot;padding-bottom: 7.083333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAV0lEQVQI1x3FwQpAMBwHYO//EA5yGCWXpaHon202FHPYQUk57iV+tMPXl1g7Q2sZGaPj6nfuG56eI6wFvE9RLy3yjtAIh0sQ3rFC8BmGg4GRRMkV3HTjA27AQcjSHz0rAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;State labels&quot;
         title=&quot;&quot;
-        src=&quot;/static/f027d530e8e329fdf069c0a008674296/f570d/state-labels-final-rainbow.png&quot;
-        srcset=&quot;/static/f027d530e8e329fdf069c0a008674296/0783d/state-labels-final-rainbow.png 240w,
-/static/f027d530e8e329fdf069c0a008674296/782f4/state-labels-final-rainbow.png 480w,
-/static/f027d530e8e329fdf069c0a008674296/f570d/state-labels-final-rainbow.png 960w,
-/static/f027d530e8e329fdf069c0a008674296/8d0ff/state-labels-final-rainbow.png 1440w,
-/static/f027d530e8e329fdf069c0a008674296/c23a1/state-labels-final-rainbow.png 1652w&quot;
+        src=&quot;/static/f027d530e8e329fdf069c0a008674296/d9199/state-labels-final-rainbow.png&quot;
+        srcset=&quot;/static/f027d530e8e329fdf069c0a008674296/8ff5a/state-labels-final-rainbow.png 240w,
+/static/f027d530e8e329fdf069c0a008674296/e85cb/state-labels-final-rainbow.png 480w,
+/static/f027d530e8e329fdf069c0a008674296/d9199/state-labels-final-rainbow.png 960w,
+/static/f027d530e8e329fdf069c0a008674296/07a9c/state-labels-final-rainbow.png 1440w,
+/static/f027d530e8e329fdf069c0a008674296/807a0/state-labels-final-rainbow.png 1652w&quot;
         sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
       /&gt;
     &lt;/span&gt;
