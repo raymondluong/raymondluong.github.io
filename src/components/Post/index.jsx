@@ -6,15 +6,17 @@ import './style.scss'
 class Post extends React.Component {
   render() {
     const {
-      title,
-      date,
-      category,
-      description,
+      title, date, description, tags,
     } = this.props.data.node.frontmatter
-    const { slug, categorySlug } = this.props.data.node.fields
+    const { slug, tagSlugs } = this.props.data.node.fields
 
     return (
       <div className="post">
+        <h2 className="post__title">
+          <Link className="post__title-link" to={slug}>
+            {title}
+          </Link>
+        </h2>
         <div className="post__meta">
           <time
             className="post__meta-time"
@@ -23,20 +25,20 @@ class Post extends React.Component {
             {moment(date).format('MMMM D, YYYY')}
           </time>
           <span className="post__meta-divider" />
-          <span className="post__meta-category" key={categorySlug}>
-            <Link to={categorySlug} className="post__meta-category-link">
-              {category}
-            </Link>
-          </span>
+          {tagSlugs &&
+            tagSlugs.map((tagSlug, i) => (
+              <span className="post__meta-link" key={tagSlug[i]}>
+                <Link to={tagSlug[i]} className="post__meta-category-link">
+                  {tags[i]}
+                </Link>
+                <span className="post__meta-divider" />
+              </span>
+            ))}
         </div>
-        <h2 className="post__title">
-          <Link className="post__title-link" to={slug}>
-            {title}
-          </Link>
-        </h2>
+
         <p className="post__description">{description}</p>
         <Link className="post__readmore" to={slug}>
-          Read
+          Read more
         </Link>
       </div>
     )

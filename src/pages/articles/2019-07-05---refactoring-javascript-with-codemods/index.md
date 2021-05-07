@@ -4,8 +4,9 @@ date: '2019-07-05'
 layout: post
 draft: false
 path: "/blog/refactoring-javascript-with-codemods/"
-category: "Front End"
+category: "Software"
 tags:
+  - "Front end"
   - "JavaScript"
   - "Codemods"
 description: "Codemods are handy for automating large-scale changes. In this article, I'll share more about codemods, walk through a simple codemod that I wrote, and share some tips for debugging."

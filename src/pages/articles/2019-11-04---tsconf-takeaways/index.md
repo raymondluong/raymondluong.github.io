@@ -4,8 +4,9 @@ date: '2019-11-04'
 layout: post
 draft: false
 path: "/blog/tsconf-takeaways/"
-category: "Front End"
+category: "Software"
 tags:
+  - "Front end"
   - "TypeScript"
   - "Conference"
 description: "Key takeaways, what I’m excited about going forward, and a comfy pair of socks."

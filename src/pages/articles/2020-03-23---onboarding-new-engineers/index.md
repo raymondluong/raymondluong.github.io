@@ -4,7 +4,7 @@ date: '2020-03-23'
 layout: post
 draft: false
 path: "/blog/onboarding-new-engineers-with-gusto/"
-category: "Collaboration"
+category: "Software"
 tags:
   - "Onboarding"
   - "Gusto"

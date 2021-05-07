@@ -59,13 +59,13 @@ export const pageQuery = graphql`
         node {
           fields {
             slug
-            categorySlug
+            tagSlugs
           }
           frontmatter {
             title
             date
-            category
             description
+            tags
           }
         }
       }

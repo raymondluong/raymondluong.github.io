@@ -4,8 +4,9 @@ date: '2019-05-23'
 layout: post
 draft: false
 path: "/blog/celebrating-pride-with-css/"
-category: "Front End"
+category: "Software"
 tags:
+  - "Front end"
   - "CSS"
 description: "Let's make a rainbow!"
 ---
