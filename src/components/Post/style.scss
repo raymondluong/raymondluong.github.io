@@ -4,9 +4,11 @@
 .post {
     @include margin-bottom(1.25);
     @include padding(0, 0, 1, 0);
-    border-bottom: 1px solid $color-gray-border;
     &:last-child {
         @include margin-bottom(.5);
+    }
+    &:not(:last-child) {
+        border-bottom: 1px solid $color-gray-border;
     }
     &__title {
         font-size: $typographic-base-font-size * 1.6875;
