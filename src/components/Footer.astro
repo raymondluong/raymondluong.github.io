@@ -1,0 +1,41 @@
+---
+import { Icon } from "astro-icon";
+// component from flowbite
+
+const socialMedia = [
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/raymondluong",
+    iconName: "mdi:linkedin",
+  },
+  {
+    name: "Github",
+    href: "https://www.github.com/raymondluong",
+    iconName: "mdi:github",
+  },
+  {
+    name: "Twitter",
+    href: "https://www.twitter.com/luongraymond",
+    iconName: "mdi:twitter",
+  },
+];
+---
+
+<footer
+  class="p-4 bg-white sm:p-6 dark:bg-zinc-900 mx-auto max-w-6xl sticky top-[100vh] underline-offset-2"
+>
+  <div class="flex justify-center mb-3">
+    {
+      socialMedia.map((item) => (
+        <a href={item.href} class="mx-2" aria-label={item.name} target="_blank">
+          <Icon name={item.iconName} class="w-6 h-6" />
+        </a>
+      ))
+    }
+  </div>
+  <div class="flex justify-center">
+    <div class="mb-6 md:mb-0 flex flex-col text-xs">
+      Built by Raymond Luong with Astro and the No Fuss Astro template 🚀
+    </div>
+  </div>
+</footer>

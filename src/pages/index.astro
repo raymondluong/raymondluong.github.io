@@ -1,0 +1,28 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Footer from "@components/Footer.astro";
+import Counter from "@components/Counter.astro";
+import counter from "@content/counter.json";
+import { homepage } from "@content/homepage";
+import Features from "@components/Features.astro";
+---
+
+<Layout>
+  <section class="grid py-10">
+    <h1 class="sm:text-4xl text-3xl font-bold mb-6 dark:text-white">👋 Hi, I'm Raymond</h1>
+    <p>I'm a Front End and Design Systems engineer based in San Francisco.</p>
+  </section>
+  <!-- {homepage.map((homepage) => <Features title={homepage.title} icon={homepage.icon} content={homepage.content} />)}
+  <section class="py-20 sm:flex sm:items-center sm:justify-evenly text-center sm:text-left">
+    {
+      (
+        <ul class="grid sm:grid-cols-3 gap-16">
+          {counter.map((counter) => (
+            <Counter number={counter.number} label={counter.label} />
+          ))}
+        </ul>
+      )
+    }
+  </section> -->
+  <Footer />
+</Layout>
