@@ -7,5 +7,8 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   site: 'https://www.raymondluong.com/',
   integrations: [mdx(), sitemap(), tailwind()],
-  base: './',
+  base: '/',
+  build: {
+    assets: 'assets',
+  },
 });
