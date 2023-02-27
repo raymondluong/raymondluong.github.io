@@ -1,0 +1,21 @@
+---
+import dayjs from 'dayjs';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
+
+const { title, desc, url, date, target = '_blank' } = Astro.props;
+
+dayjs.extend(localizedFormat);
+const displayDate = dayjs(date).format('ll');
+---
+
+<article class="rounded-lg bg-base-100">
+  <a
+    href={url}
+    target={target}
+    class="text-lg font-semibold transition hover:underline"
+  >
+    {title}
+  </a>
+  <p class="py-1 text-1xl">{desc}</p>
+  <time class="text-sm text-gray-500">{displayDate}</time>
+</article>

@@ -1,4 +1,4 @@
 Repo for my [personal website](http://www.raymondluong.com/).
 
-Powered by [Gatsby](https://www.gatsbyjs.org/). Based on the 
-[Lumen](https://www.gatsbyjs.org/starters/GatsbyCentral/gatsby-v2-starter-lumen/) template.
+Powered by [Astro](https://astro.build/) and based on the 
+[Astro Modern Personal Website](https://astro-modern-personal-website.netlify.app//) template.

@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About">
+  <h1 class="text-3xl w-full font-bold mb-5">About</h1>
+  <p class="mb-5">
+    Hi! My name is Raymond. I'm a mission-driven software engineer interested in
+    using technology to solve problems and improve the lives of others. I take a
+    human-centered and pragmatic approach to software development and I believe
+    in iteration and feedback over perfection. <strong
+      >I most enjoy working on the front end,</strong
+    > though I have worked across the stack and can put on other hats when necessary.
+    On top of coding, I have experience leading projects, organizing timelines, and
+    collaborating with cross-functional stakeholders (product, design, operations,
+    marketing, etc).
+  </p>
+
+  <!-- Tailwind `list-inside` class isn't working for some reason -->
+  <ul class="mb-5 list-disc" style={{ 'list-style-position': 'inside' }}>
+    Technologies I have experience with:
+    <li>JavaScript, HTML, CSS</li>
+    <li>React, Redux, TypeScript, Flow</li>
+    <li>Vite, Webpack</li>
+    <li>ESLint, Prettier</li>
+    <li>Storybook, Figma</li>
+    <li>Jest, React Testing Library, Enzyme</li>
+  </ul>
+
+  <p class="mb-5">
+    Currently I'm a Front End Engineer on the Platform team at <a
+      href="https://gem.com/"
+      target="_blank">Gem 💎</a
+    >. I lead development of our internal design system and front end tooling. My background is in
+    Human-Computer Interaction from Stanford 🌲. I currently reside in San Francisco, and
+    in my free time I enjoy practicing yoga, lifting heavy things, visiting national
+    parks, reading sci-fi, doing crosswords, traveling to new countries, and going to concerts.
+  </p>
+
+  <p class="mb-5">
+    Thanks for reading! Here's a picture of me petting an incredibly soft llama:
+    <img
+      src="./llama.png"
+      alt="Raymond petting a llama in Sajama National Park, Bolivia"
+      class="max-w-full"
+    />
+  </p>
+</BaseLayout>

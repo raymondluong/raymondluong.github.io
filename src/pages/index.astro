@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Card from '../components/Card.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+
+const latest_posts = posts.slice(0, 3);
+---
+
+<BaseLayout>
+  <section class="mb-5">
+    <h1 class="text-3xl font-bold">👋 Hi, I'm Raymond Luong</h1>
+    <p class="text-xl py-3">
+      I'm a Front End and Design Systems Engineer based in San Francisco.
+    </p>
+  </section>
+
+  <section>
+    <h2 class="text-xl w-full font-bold mb-5 mt-10">Latest from my blog</h2>
+    <div class="flex flex-col gap-5">
+      {
+        latest_posts.map((post) => (
+          <Card
+            title={post.data.title}
+            desc={post.data.description}
+            url={'/blog/' + post.slug}
+            date={post.data.date}
+            target="_self"
+          />
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
