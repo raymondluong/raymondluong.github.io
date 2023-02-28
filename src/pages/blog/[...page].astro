@@ -4,7 +4,9 @@ import Card from '../../components/Card.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths({ paginate }) {
-  const posts = await getCollection('blog');
+  const posts = (await getCollection('blog')).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+  );
   return paginate(posts, { pageSize: 10 });
 }
 
