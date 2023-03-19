@@ -1,20 +1,23 @@
 ---
 title: Refactoring JavaScript with Codemods
 date: '2019-07-05'
-category: "Software"
+pubDatetime: 2023-01-30T15:57:52.737Z
+category: 'Software'
 tags:
-  - "Front end"
-  - "JavaScript"
-  - "Codemods"
+  - Front-end
+  - JavaScript
+  - Codemods
 description: "Codemods are handy for automating large-scale changes. In this article, I'll share more about codemods, walk through a simple codemod that I wrote, and share some tips for debugging."
+featured: true
 ---
 
-One of the most exciting parts about working with JavaScript is the fast-paced nature of the ecosystem. New patterns and standards evolve over time. However, keeping up with the changes can be complex and time-consuming because they may involve large-scale modifications or refactors that are a bit more involved than a simple find-and-replace. 
+One of the most exciting parts about working with JavaScript is the fast-paced nature of the ecosystem. New patterns and standards evolve over time. However, keeping up with the changes can be complex and time-consuming because they may involve large-scale modifications or refactors that are a bit more involved than a simple find-and-replace.
 
 Fortunately, codemods are a handy tool that help us automate these changes. In this article, I'll share more about codemods, walk through a simple codemod that I wrote, and share some tips for debugging.
 
 #What are codemods?
 Codemods are scripts that automate a code change. They're usually comprised of two parts:
+
 1. Find all instances of the code to be changed, most easily accomplished with some form of pattern matching
 2. Apply a transformation to each instance, usually based on the original instance but with some modifications
 
@@ -24,7 +27,7 @@ I mentioned large-scale refactors earlier — these can happen when upgrading ve
 For example, in my current role at Gusto, we've used codemods to fix ESLint errors (more on this below) and move off deprecated React features.
 
 #How do I write one?
-To demonstrate how to write a codemod, I'll walk through an example I wrote to fix an ESLint error. I assume a basic understanding of JavaScript, React, and tree data structures. I'll also talk about <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree" target="_blank">ASTs (Abstract Syntax Trees)</a> but prior knowledge is not a required. 
+To demonstrate how to write a codemod, I'll walk through an example I wrote to fix an ESLint error. I assume a basic understanding of JavaScript, React, and tree data structures. I'll also talk about <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree" target="_blank">ASTs (Abstract Syntax Trees)</a> but prior knowledge is not a required.
 
 ##Context
 At Gusto, we added ESLint to our codebase after we had already written a bunch of React components. However, some of our existing components did not match the ESLint rules that we decided to enforce. To avoid having those errors block us from adding ESLint, we suppressed the existing errors and added ESLint so it could immediately start having value for our new code going forward.
@@ -122,17 +125,21 @@ class ExampleComponent extends React.Component {
 We can run our codemod and add some `console.log` statements to ensure that it's finding the correct lines.
 
 To run the codemod, you'll need the jscodeshift CLI:
+
 ```
 jscodeshift -t ~/path/to/codemod.js ~/path/to/component.jsx
 ```
+
 -t specifies to transform the code.
 
 Adding logging:
+
 ```js
 console.log(instances.length); // outputs 1
 ```
 
 Not convinced? We can dig into the instance and log some of the properties, for example the name:
+
 ```js
 console.log(instances[0].get('id').node.name); // outputs address
 ```
@@ -146,7 +153,7 @@ To figure out how to represent our target code, we'll go back to the AST explore
 
 Again, our main output is a `VariableDeclaration` of `const` kind with a `VariableDeclarator`, but the `VariableDeclarator` subtree is different. For the `id`, instead of the name of the variable, we have an `ObjectPattern` to represent a JavaScript Object. The properties of the object are an array for each key/value pair. For our example, there is a single `Property` with a key of `address` and a value of `mailingAddress`.
 
-For the `init`, we have a `MemberExpression` that matches the inner `MemberExpression` from the first step, which makes sense because the expression to the right of the equals sign in our target code is simply `this.props`. 
+For the `init`, we have a `MemberExpression` that matches the inner `MemberExpression` from the first step, which makes sense because the expression to the right of the equals sign in our target code is simply `this.props`.
 
 Now let's translate this into our replace method. We can learn what the inputs are for each type by looking at the type definitions in the <a href="https://github.com/benjamn/ast-types/blob/master/def" target="_blank">ast-types library</a>. The fields for each type correspond to its arguments.
 
@@ -158,6 +165,7 @@ const propName = instance.get('init').node.property.name;
 ```
 
 Then we can use these as inputs into our `ObjectPattern`:
+
 ```js
 j.objectPattern(
   [
@@ -166,30 +174,24 @@ j.objectPattern(
 ),
 ```
 
-Next we'll build the `MemberExpression` by looking at the type and seeing what the inputs are. 
+Next we'll build the `MemberExpression` by looking at the type and seeing what the inputs are.
+
 ```js
-j.memberExpression(
-  j.thisExpression(),
-  j.identifier('props'),
-)
+j.memberExpression(j.thisExpression(), j.identifier('props'));
 ```
 
 Combining these, we get our replace step:
+
 ```js
-instances.forEach(instance => {
+instances.forEach((instance) => {
   const variableName = instance.get('id').node.name;
   const propName = instance.get('init').node.property.name;
   j(instance).replaceWith(
     j.variableDeclarator(
-      j.objectPattern(
-        [
-          j.property('init', j.identifier(propName), j.identifier(variableName)),
-        ],
-      ),
-      j.memberExpression(
-        j.thisExpression(),
-        j.identifier('props'),
-      ),
+      j.objectPattern([
+        j.property('init', j.identifier(propName), j.identifier(variableName)),
+      ]),
+      j.memberExpression(j.thisExpression(), j.identifier('props')),
     ),
   );
 });
@@ -198,13 +200,12 @@ instances.forEach(instance => {
 Let's run our codemod on our test component again and see what happens:
 
 Output:
+
 ```js
 class ExampleComponent extends React.Component {
   // other interesting behavior
   render() {
-    const {
-      address: mailingAddress
-    } = this.props;
+    const { address: mailingAddress } = this.props;
     return (
       <>
         // other components
@@ -234,14 +235,17 @@ eslint --fix ~/path/to/component.jsx
 There you go! It's definitely a process that involves a lot of trial and error, console logging, and back and forth between the code and the AST explorer, but it can end up being more efficient and saving more time than manually applying a transformation.
 
 ##Debugging tips
+
 - `console.log` is your friend! I haven't found a way to get a debugger (if you know a way, please let me know!), so I've been relying heavily on logging at every step to verify the behavior. Logging `Object.keys` and `Object.entries` has been especially useful in seeing all the available properties.
 - Use the AST explorer! Writing codemods would be almost impossible without some way of visualizing code as an AST.
 - When you're at the replace step, ensure that you're passing in the correct arguments to the node types that you're building. You can look at the type definitions in the `ast-types` repo for all the type annotations.
 - Make sure you are using the correct parser setting. We use Flow in our JavaScript so I include `parser=flow` in all my `jscodeshift` commands.
-- Look at existing codemods, there are some great examples in the <a href="https://github.com/reactjs/react-codemod" target="_blank">react-codemod</a> library. If you're looking to apply a transformation, check online to see if someone has already written something similar. 
+- Look at existing codemods, there are some great examples in the <a href="https://github.com/reactjs/react-codemod" target="_blank">react-codemod</a> library. If you're looking to apply a transformation, check online to see if someone has already written something similar.
 
 # Reference
+
 All of the links from inside the article:
+
 - <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree" target="_blank">ASTs (Abstract Syntax Trees)</a>
 - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" target="_blank">ES6 destructuring syntax</a>
 - <a href="https://github.com/facebook/jscodeshift" target="_blank">jscodeshift</a>
@@ -250,8 +254,9 @@ All of the links from inside the article:
 - <a href="https://github.com/reactjs/react-codemod" target="_blank">react-codemod</a>
 
 Lastly, here's the codemod in its entirety:
+
 ```js
-module.exports = function(file, api) {
+module.exports = function (file, api) {
   const j = api.jscodeshift;
   const root = j(file.source);
 
@@ -277,23 +282,22 @@ module.exports = function(file, api) {
   });
 
   // Step 2: Apply a code transformation and replace the code
-  instances.forEach(instance => {
+  instances.forEach((instance) => {
     const variableName = instance.get('id').node.name;
     const propName = instance.get('init').node.property.name;
     j(instance).replaceWith(
       j.variableDeclarator(
-        j.objectPattern(
-          [
-            j.property('init', j.identifier(propName), j.identifier(variableName)),
-          ],
-        ),
-        j.memberExpression(
-          j.thisExpression(),
-          j.identifier('props'),
-        ),
+        j.objectPattern([
+          j.property(
+            'init',
+            j.identifier(propName),
+            j.identifier(variableName),
+          ),
+        ]),
+        j.memberExpression(j.thisExpression(), j.identifier('props')),
       ),
     );
   });
   return root.toSource();
-}
+};
 ```

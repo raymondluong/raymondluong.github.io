@@ -1,5 +1,6 @@
 # build output
 dist/
+.output/
 
 # dependencies
 node_modules/
@@ -17,6 +18,10 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+src/.DS_Store
 
-# Astro
-.astro/
+# ignore .astro directory
+.astro
+
+# ignore Jampack cache files
+.jampack/
