@@ -4,7 +4,7 @@ date: '2023-05-20'
 tags:
   - Front-end
   - ESLint
-description: 'How to create custom ESLint rules with TypeScript and without publishing to NPM'
+description: 'Learn what custom rules are, why you might want to use them, and how to set them up without going through the whole rigamarole of publishing an NPM package.'
 featured: true
 ---
 
