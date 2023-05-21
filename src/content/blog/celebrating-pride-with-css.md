@@ -1,6 +1,5 @@
 ---
 title: Celebrating Pride with CSS
-pubDatetime: 2023-01-30T15:57:52.737Z
 date: '2019-05-23'
 tags:
   - Front-end

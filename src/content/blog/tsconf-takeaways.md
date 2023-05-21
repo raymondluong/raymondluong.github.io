@@ -1,7 +1,6 @@
 ---
 title: TSConf Takeaways
 date: '2019-11-04'
-pubDatetime: 2023-01-30T15:57:52.737Z
 tags:
   - Front end
   - TypeScript
