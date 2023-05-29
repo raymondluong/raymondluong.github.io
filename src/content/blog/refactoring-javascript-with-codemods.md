@@ -14,21 +14,25 @@ One of the most exciting parts about working with JavaScript is the fast-paced n
 
 Fortunately, codemods are a handy tool that help us automate these changes. In this article, I'll share more about codemods, walk through a simple codemod that I wrote, and share some tips for debugging.
 
-#What are codemods?
+# What are codemods?
+
 Codemods are scripts that automate a code change. They're usually comprised of two parts:
 
 1. Find all instances of the code to be changed, most easily accomplished with some form of pattern matching
 2. Apply a transformation to each instance, usually based on the original instance but with some modifications
 
-#When can I use codemods?
+# When can I use codemods?
+
 I mentioned large-scale refactors earlier — these can happen when upgrading versions of packages where existing methods are deprecated or new methods are introduced. They can also be used for syntax improvements or linting fixes.
 
 For example, in my current role at Gusto, we've used codemods to fix ESLint errors (more on this below) and move off deprecated React features.
 
-#How do I write one?
+# How do I write one?
+
 To demonstrate how to write a codemod, I'll walk through an example I wrote to fix an ESLint error. I assume a basic understanding of JavaScript, React, and tree data structures. I'll also talk about <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree" target="_blank">ASTs (Abstract Syntax Trees)</a> but prior knowledge is not a required.
 
-##Context
+## Context
+
 At Gusto, we added ESLint to our codebase after we had already written a bunch of React components. However, some of our existing components did not match the ESLint rules that we decided to enforce. To avoid having those errors block us from adding ESLint, we suppressed the existing errors and added ESLint so it could immediately start having value for our new code going forward.
 
 One of the errors we suppressed is `react/destructuring-assignment`, which prefers using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" target="_blank">ES6 destructuring syntax</a> when possible. For example:
@@ -45,7 +49,8 @@ const address = this.props.mailingAddress;
 
 There are a bunch of components in our codebase that do not destructure and have the destructuring-assignment rule suppressed. I'll walk through a codemod I wrote to address the specific case above. Note that this is just one example and it doesn't cover _all_ the violations of the destructuring-assignment rule. When writing codemods, I've found that it's simplest to start with the basic cases and gradually add on more complex cases.
 
-##Step 0: Boilerplate code
+## Step 0: Boilerplate code
+
 The <a href="https://github.com/facebook/jscodeshift" target="_blank">jscodeshift</a> package allows us to write codemods for JavaScript. To get started, we can use the following boilerplate code:
 
 ```js
@@ -64,7 +69,8 @@ module.exports = function(file, api) {
 }
 ```
 
-##Step 1: Find all instances of the code to change
+## Step 1: Find all instances of the code to change
+
 To accomplish step 1, we'll use pattern matching with AST (abstract syntax tree). AST allows us to represent code as a tree where each syntactic pattern is represented as a node, perhaps as a subtree of other nodes or with its own children nodes. There is a handy website called <a href="https://astexplorer.net/" target="_blank">AST Explorer</a> that we can use to visualize code as an AST.
 
 Let's see what the AST structure looks like for our example code snippet:
@@ -145,7 +151,8 @@ console.log(instances[0].get('id').node.name); // outputs address
 
 Great! Looks like it's finding what we're expecting. Let's move on to step 2.
 
-##Step 2: Apply a transformation and replace the code
+## Step 2: Apply a transformation and replace the code
+
 To figure out how to represent our target code, we'll go back to the AST explorer. This time, our input will be our desired code.
 
 ![AST part 2](/step2-ast.png)
@@ -233,7 +240,7 @@ eslint --fix ~/path/to/component.jsx
 
 There you go! It's definitely a process that involves a lot of trial and error, console logging, and back and forth between the code and the AST explorer, but it can end up being more efficient and saving more time than manually applying a transformation.
 
-##Debugging tips
+## Debugging tips
 
 - `console.log` is your friend! I haven't found a way to get a debugger (if you know a way, please let me know!), so I've been relying heavily on logging at every step to verify the behavior. Logging `Object.keys` and `Object.entries` has been especially useful in seeing all the available properties.
 - Use the AST explorer! Writing codemods would be almost impossible without some way of visualizing code as an AST.
