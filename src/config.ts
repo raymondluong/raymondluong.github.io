@@ -3,7 +3,7 @@ import type { Site, SocialObjects } from './types';
 export const SITE: Site = {
   website: 'https://raymondluong.com',
   author: 'Raymond Luong',
-  desc: 'A minimal, responsive and SEO-friendly Astro blog theme.',
+  desc: 'Front end and design systems engineer based in San Francisco.',
   title: 'Raymond Luong',
   ogImage: 'profile.jpg',
   lightAndDarkMode: true,
