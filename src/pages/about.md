@@ -3,27 +3,18 @@ layout: ../layouts/AboutLayout.astro
 title: 'About'
 ---
 
-Hi! My name is Raymond. I'm a mission-driven software engineer interested in
-using technology to solve problems and improve the lives of others. I take a
-human-centered and pragmatic approach to software development and I believe
-in iteration and feedback over perfection. <strong>I most enjoy working on the front end,</strong> though I have worked across the stack and can put on other hats when necessary.
-On top of coding, I have experience leading projects, organizing timelines, and
-collaborating with cross-functional stakeholders (product, design, operations,
-marketing, etc).
+Hi! My name is Raymond and I'm a Front End and Design Systems Engineer based in San Francisco. I'm passionate about building beautiful and intuitive products that solve real problems. Additionally, I enjoy creating reusable and accessible design system components and implementing initiatives that improve developer productivity and experience. I value pragmatism, collaboration, and ownership, and I have experience leading projects, mentoring other engineers, and collaborating with cross-functional stakeholders.
 
 Technologies I have experience with:
 
-- JavaScript, HTML, CSS
-- React, Redux, TypeScript, Flow
+- JavaScript, TypeScript, HTML, CSS
+- React, Redux, GraphQL
 - Vite, Webpack
 - ESLint, Prettier
 - Storybook, Figma
 - Jest, React Testing Library, Enzyme
 
-Currently I'm a Front End Engineer on the Platform team at <a href="https://gem.com/" target="_blank">Gem 💎</a>. I lead development of our internal design system and front end tooling. My background is in
-Human-Computer Interaction from Stanford 🌲. I currently reside in San Francisco, and
-in my free time I enjoy practicing yoga, lifting heavy things, visiting national
-parks, reading sci-fi, doing crosswords, traveling to new countries, and going to concerts.
+Most recently, I worked at <a href="https://gem.com/" target="_blank">Gem 💎</a> as the first front-end focused hire. I led the development of their design system and owned initiatives related to front-end tooling and developer experience. On the design system side, I built components such as tables, menus, and form inputs. I also maintained documentation, coordinated migrations, established contribution guidelines, and ensured accessibility standards. On the tooling side, notable projects included migrating our build system from Webpack 4 to Vite, conducting a large-scale ESLint rule rollout, and writing codemods to migrate off deprecated patterns. In general, I was my own product manager and gathered both qualitative and quantitative data to prioritize projects and build our roadmap.
 
 Thanks for reading! Here's a picture of me petting an incredibly soft llama:
 
