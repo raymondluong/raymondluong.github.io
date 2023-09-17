@@ -5,7 +5,6 @@ tags:
   - Front-end
   - ESLint
 description: 'Learn what custom rules are, why you might want to use them, and how to set them up without going through the whole rigamarole of publishing an NPM package.'
-featured: true
 ---
 
 [ESLint](https://eslint.org/) is one of my favorite packages because it can enforce coding conventions and manage the natural entropy of codebases with multiple contributors. One underrated feature is the ability to leverage custom rules specific to a given codebase. In this post, I will explain what custom rules are, why you might want to use them, and how to set them up without going through the whole rigamarole of publishing an NPM package.
