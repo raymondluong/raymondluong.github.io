@@ -30,7 +30,7 @@ There are a million things you could be doing for your design system. Some are i
 - Run audits. A package I like to use is `react-scanner` which combs through your codebase and gives you numbers on component usage. Components that are used more frequently are probably worth more time and energy.
 - Align with the product/business. Is there a new component that would be beneficial for a major feature release that would help unblock new sales? Are customers reporting usability issues for a certain product area? Even though design system work is generally internal, it is important to not lose sight of the business goals of the company.
 
-Example: When we surveyed other engineers, a lot of them ran into issues working with our existing Table component based on Bootstrap. The component API wasn’t intuitive (it was a mega component with 30+ props), there were a lot of CSS overrides and hacks needed, and some features were missing or buggy. This was one of the most commonly commented on components and it was also used fairly frequently across our product, so we prioritized reworking it.
+> Example: When we surveyed other engineers, a lot of them ran into issues working with our existing Table component based on Bootstrap. The component API wasn’t intuitive (it was a mega component with 30+ props), there were a lot of CSS overrides and hacks needed, and some features were missing or buggy. This was one of the most commonly commented on components and it was also used fairly frequently across our product, so we prioritized reworking it.
 
 ## 🛠️ Component MVPs
 
@@ -40,7 +40,7 @@ For example, if the new component will replace an existing component, do an audi
 
 Once you have addressed the common use cases, don’t be afraid to ship and then iterate.
 
-Example: When we were building out a Table component, we identified a bunch of features, referencing existing use cases as well as other libraries, then prioritized them into must-haves and nice-to-haves. We focused on the must-haves and launched an MVP version that was in turn used in an upcoming feature.
+> Example: When we were building out a Table component, we identified a bunch of features, referencing existing use cases as well as other libraries, then prioritized them into must-haves and nice-to-haves. We focused on the must-haves and launched an MVP version that was in turn used in an upcoming feature.
 
 ## 🙋‍♀️ Feedback and Iteration
 
@@ -50,13 +50,13 @@ Depending on the bugs/feedback you get, iterate on your component. Address the b
 
 Depending on the component, the feedback loop may vary. If the component won’t be used _right away_, ensure there’s enough time on your schedule to collect feedback and come back to this component if needed.
 
-Example: We have a Slack channel where people can leave feedback, report bugs, and ask questions. Depending on the severity, we fix right away or triage into an Asana board for the future. The specific tooling may vary based on your company, but I like Slack because it’s very low friction for users. I don’t want the reporting process to get in the way of learning about issues.
+> Example: We have a Slack channel where people can leave feedback, report bugs, and ask questions. Depending on the severity, we fix right away or triage into an Asana board for the future. The specific tooling may vary based on your company, but I like Slack because it’s very low friction for users. I don’t want the reporting process to get in the way of learning about issues.
 
 ## 🐕 Dogfooding
 
 Dogfooding is a techie term for when a company uses their own product, e.g. Notion internally uses Notion to organize their documents. As a design system engineer, you may not be directly building product, but you can still dogfood your own design system. This approach will help you build empathy for your users and it can also help you identify improvements and find bugs. Dogfooding your design system can take many shapes, e.g. pair programming with a product engineer, working on a new feature in a hackathon, improving a part of the product that currently isn’t being worked on, etc.
 
-Example: I mentioned that I had been working on a new `Table` component for our design system. There was a table on our homepage that we wanted to migrate, but the product teams have not had the bandwidth to prioritize. I decided to migrate it myself as an opportunity to dogfood my own product, proactively identify potential issues before it gets to the users, and also leave a code example in the codebase so that other engineers could easily reference it.
+> Example: I mentioned that I had been working on a new `Table` component for our design system. There was a table on our homepage that we wanted to migrate, but the product teams have not had the bandwidth to prioritize. I decided to migrate it myself as an opportunity to dogfood my own product, proactively identify potential issues before it gets to the users, and also leave a code example in the codebase so that other engineers could easily reference it.
 
 ## 📈 Measure Progress
 
@@ -64,7 +64,7 @@ Just like any other product, metrics play a vital role in understanding the succ
 
 As part of measuring progress, you’ll likely produce charts in your company’s preferred data tooling. Make these accessible to other stakeholders! This helps continually reinforce the value of your design system.
 
-Example: We have a reoccurring cron job that runs `react-scanner`, reformats the output, and sends the cleaned up data into Honeycomb, which we then use to build dashboards that measure component usage over time. We do this for our design system components to measure adoption as well as deprecated Bootstrap components to track migration progress. For example, when we were migrating off the Bootstrap `FormControl` component to an internal text field component, the chart for `FormControl` plateaued while the chart for the new text field component start seeing adoption. This told us that the component we had built was meeting our user’s needs and they didn’t need to reach for the deprecated component anymore.
+> Example: We have a reoccurring cron job that runs `react-scanner`, reformats the output, and sends the cleaned up data into Honeycomb, which we then use to build dashboards that measure component usage over time. We do this for our design system components to measure adoption as well as deprecated Bootstrap components to track migration progress. For example, when we were migrating off the Bootstrap `FormControl` component to an internal text field component, the chart for `FormControl` plateaued while the chart for the new text field component start seeing adoption. This told us that the component we had built was meeting our user’s needs and they didn’t need to reach for the deprecated component anymore.
 
 ## Summary
 
