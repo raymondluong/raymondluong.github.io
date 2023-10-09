@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: 'Raymond Luong',
   desc: 'Personal website and blog for Raymond Luong, a Front end and Design Systems Engineer based in San Francisco.',
   title: 'Raymond Luong',
-  ogImage: 'profile.jpg',
+  ogImage: 'favicon.jpg',
   lightAndDarkMode: true,
   postPerPage: 10,
 };
