@@ -1,7 +1,6 @@
 ---
 title: Refactoring JavaScript with Codemods
 date: '2019-07-05'
-category: 'Software'
 tags:
   - Front-end
   - JavaScript
