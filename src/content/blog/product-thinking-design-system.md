@@ -4,7 +4,7 @@ date: '2023-09-13'
 tags:
   - Front end
   - Design systems
-description: 'When building a design system, it can be easy to let your inner perfectionist take over and try to cover every situation, especially when referencing established design systems. A better approach is to treat it as a product that grows and evolves with your users because its value ultimately lies in the problems it solves and the needs it meets.'
+description: 'A design system is essentially a product that grows and evolves with your users. Learn how to incorporate product thinking principles to your design system to solve problems and maximize its impact.'
 featured: true
 ---
 
