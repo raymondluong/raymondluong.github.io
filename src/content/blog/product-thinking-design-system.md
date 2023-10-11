@@ -1,5 +1,5 @@
 ---
-title: Applying Product Thinking to your Design System
+title: Applying Product Thinking Principles to your Design System
 date: '2023-09-13'
 tags:
   - Front end
