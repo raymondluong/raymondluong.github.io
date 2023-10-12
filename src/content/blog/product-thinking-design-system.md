@@ -60,7 +60,7 @@ Dogfooding is a techie term for when a company uses their own product, e.g. Noti
 
 ## 📈 Measure Progress
 
-Just like any other product, metrics play a vital role in understanding the success of your design system. Component usage and adoption is a straightforward place to start. I mentioned the `react-scanner` in the Prioritization section, which statically analyzes your codebase and gives metrics on component usage. Tracking usage over time can give you visibility into potential issues as well. For example, if a component isn’t being used as often as expected, its component API may be clunky or it may have more bugs
+Just like any other product, metrics play a vital role in understanding the success of your design system. Component usage and adoption is a straightforward place to start. I mentioned the `react-scanner` in the Prioritization section, which statically analyzes your codebase and gives metrics on component usage. Tracking usage over time can give you visibility into potential issues as well. For example, if a component isn’t being used as often as expected, it may have bugs or a clunky component API.
 
 As part of measuring progress, you’ll likely produce charts in your company’s preferred data tooling. Make these accessible to other stakeholders! This helps continually reinforce the value of your design system.
 
