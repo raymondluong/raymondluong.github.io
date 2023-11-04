@@ -3,7 +3,7 @@ layout: ../layouts/AboutLayout.astro
 title: 'About'
 ---
 
-Hi! I'm a Front End Engineer interested in design systems, developer productivity and tooling, accessibility, TypeScript, CSS, and UI/UX design. Currently based in San Francisco. 🌉
+Hi! I'm a Front End Engineer interested in design systems, developer productivity + tooling, accessibility, TypeScript, CSS, and UI/UX design. Currently based in San Francisco. 🌉
 
 I'm passionate about building beautiful and intuitive products that solve real problems. Additionally, I enjoy creating reusable and accessible design system components and implementing initiatives that improve developer productivity and experience. I value pragmatism, collaboration, and ownership, and I have experience leading projects, mentoring other engineers, and collaborating with cross-functional stakeholders.
 
