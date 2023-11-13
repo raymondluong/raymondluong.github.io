@@ -14,9 +14,9 @@ const { post } = Astro.props;
 
 const { title, author, description, ogImage, date, tags } = post.data;
 
-const { Content } = await post.render();
+const { Content, remarkPluginFrontmatter } = await post.render();
 
-const ogUrl = ogImage ? new URL(ogImage, Astro.url.origin).href : null;
+const ogUrl = ogImage ? new URL(ogImage, Astro.url.origin).href : undefined;
 ---
 
 <Layout title={title} author={author} description={description} ogImage={ogUrl}>
@@ -35,7 +35,11 @@ const ogUrl = ogImage ? new URL(ogImage, Astro.url.origin).href : null;
   </div>
   <main id="main-content">
     <h1 class="post-title">{title}</h1>
-    <Datetime datetime={date} size="lg" className="my-2" dateOnly />
+    <div class="my-2 flex gap-4">
+      <Datetime datetime={date} size="lg" dateOnly />
+      •
+      <span class="opacity-80">{remarkPluginFrontmatter.minutesRead}</span>
+    </div>
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
     </article>

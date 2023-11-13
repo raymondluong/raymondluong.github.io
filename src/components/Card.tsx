@@ -25,7 +25,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
           </h3>
         )}
       </a>
-      <Datetime datetime={date} dateOnly />
+      <Datetime datetime={date} dateOnly className="my-0.5" />
       <p>{description}</p>
     </li>
   );
