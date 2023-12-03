@@ -3,9 +3,9 @@ layout: ../layouts/AboutLayout.astro
 title: 'About'
 ---
 
-Hi! I'm a Front End Engineer interested in design systems, developer productivity + tooling, accessibility, TypeScript, CSS, and UI/UX design. Currently based in San Francisco. 🌉
+Hi! I'm a Front End Engineer interested in design systems, developer productivity + tooling, accessibility, TypeScript, CSS, and UI/UX design. Based in San Francisco. 🌉
 
-I'm passionate about building beautiful and intuitive products that solve real problems. Additionally, I enjoy creating reusable and accessible design system components and implementing initiatives that improve developer productivity and experience. I value pragmatism, collaboration, and ownership, and I have experience leading projects, mentoring other engineers, and collaborating with cross-functional stakeholders.
+I currently work at [Mercury](https://mercury.com/) on the Front End Developer User Experience team. I work on design systems, developer productivity, build tooling, accessibility, reusable libraries, testing, documentation, and anything else needed to create a seamless front end engineering experience and support our product teams in building delightful banking products for startups. Check out [my LinkedIn](https://www.linkedin.com/in/raymondluong/) for more details on my work experience.
 
 Technologies I have experience with:
 
@@ -15,8 +15,6 @@ Technologies I have experience with:
 - ESLint, Prettier
 - Storybook, Figma
 - Jest, React Testing Library, Enzyme
-
-Most recently, I worked at <a href="https://gem.com/" target="_blank">Gem 💎</a> as the first front-end focused hire. I led the development of their design system and owned initiatives related to front-end tooling and developer experience. On the design system side, I built components such as tables, menus, and form inputs. I also maintained documentation, coordinated migrations, established contribution guidelines, and ensured accessibility standards. On the tooling side, notable projects included migrating our build system from Webpack 4 to Vite, conducting a large-scale ESLint rule rollout, and writing codemods to migrate off deprecated patterns. In general, I was my own product manager and gathered both qualitative and quantitative data to prioritize projects and build our roadmap.
 
 Thanks for reading! Here's a picture of me petting an incredibly soft llama:
 
