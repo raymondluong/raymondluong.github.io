@@ -1,0 +1,19 @@
+---
+import { SITE } from '@config';
+import Layout from '@layouts/Layout.astro';
+import Main from '@layouts/Main.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import Parks from '@components/Parks';
+---
+
+<Layout title={`National Parks Log | ${SITE.title}`}>
+  <Header activeNav="parks" />
+  <Main
+    pageTitle="Parks"
+    pageDesc="Outside of software engineering, I enjoy hiking and one of my bucket list items is to visit all the US national parks. I created this page to log my visits, track my progress, and share photos."
+  >
+    <Parks client:load />
+  </Main>
+  <Footer />
+</Layout>
