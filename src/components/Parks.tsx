@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import allParks from '@data/allParks.json';
 import parkVisits from '@data/parkVisits.json';
-
-// By state
-// Visited
-// Pictures
-// Park Card component
+import internationalParkVisits from '@data/internationalParkVisits.json';
 
 type Park = {
   description: string;
@@ -51,6 +47,7 @@ const groupParksByState = (parks: Park[]) => {
   return groupedParks;
 };
 
+// TODO: Use Object.groupBy when TS 5.4 is available
 const groupParkVisitsByPark = (parkVisits: ParkVisit[]) => {
   const groupedVisits = parkVisits.reduce((acc, visit) => {
     const parkId = visit.park_id;
@@ -83,7 +80,13 @@ const Parks = () => {
 
   return (
     <>
-      <Controls setFilter={setFilter} setGroupBy={setGroupBy} />
+      <TotalVisited />
+      <Controls
+        filter={filter}
+        groupBy={groupBy}
+        setFilter={setFilter}
+        setGroupBy={setGroupBy}
+      />
       {groupBy === 'state' && (
         <div className="grid grid-cols-3 gap-4">
           {sortedGroupedParks.map(([state, parks]) => (
@@ -98,23 +101,38 @@ const Parks = () => {
           ))}
         </ul>
       )}
+      <InternationalParks />
     </>
   );
 };
 
+const TotalVisited = () => {
+  return (
+    <div className="mb-4">
+      Visited: {Object.keys(groupedVisits).length} out of {allParks.length}
+    </div>
+  );
+};
+
 const Controls = ({
+  filter,
+  groupBy,
   setFilter,
   setGroupBy,
 }: {
+  filter: Filter;
+  groupBy: GroupBy;
   setFilter: (filter: Filter) => void;
   setGroupBy: (groupBy: GroupBy) => void;
 }) => {
   return (
     <>
-      <div className="mb-4 flex gap-4">
+      <div className="flex gap-4">
         View by:
         <button
-          className="hover:underline"
+          className={`hover:underline ${
+            filter === 'visited' ? 'font-bold' : ''
+          }`}
           onClick={() => {
             setFilter('visited');
           }}
@@ -123,7 +141,7 @@ const Controls = ({
         </button>
         <span>|</span>
         <button
-          className="hover:underline"
+          className={`hover:underline ${filter === 'all' ? 'font-bold' : ''}`}
           onClick={() => {
             setFilter('all');
           }}
@@ -134,7 +152,9 @@ const Controls = ({
       <div className="mb-4 flex gap-4">
         Group by:
         <button
-          className="hover:underline"
+          className={`hover:underline ${
+            groupBy === 'state' ? 'font-bold' : ''
+          }`}
           onClick={() => {
             setGroupBy('state');
           }}
@@ -143,7 +163,7 @@ const Controls = ({
         </button>
         <span>|</span>
         <button
-          className="hover:underline"
+          className={`hover:underline ${groupBy === 'none' ? 'font-bold' : ''}`}
           onClick={() => {
             setGroupBy('none');
           }}
@@ -189,13 +209,29 @@ const ParkVisit = ({ parkId, filter }: { parkId: string; filter: Filter }) => {
   const visits = groupedVisits[parkId];
   const hasVisited = Boolean(visits?.length > 0);
   if (hasVisited) {
-    return (
-      <li>
-        ✅ {park.title} {visits && `(${visits.length})`}
-      </li>
-    );
+    return <li>✅ {park.title}</li>;
   }
   return filter === 'all' ? <li>{park.title}</li> : null;
+};
+
+const InternationalParks = () => {
+  return (
+    <div className="mt-12">
+      <p>
+        Not directly part of my goal, but I've also visited a few international
+        parks:
+      </p>
+      <ul>
+        {internationalParkVisits.map((visit) => {
+          return (
+            <li key={visit.name}>
+              {visit.name} ({visit.country})
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
 };
 
 export default Parks;

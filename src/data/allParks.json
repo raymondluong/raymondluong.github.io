@@ -765,5 +765,57 @@
     "acres": 147237.02,
     "square_km": 595.8,
     "date_established": "1919-11-19T06:00:00Z"
+  },
+  {
+    "description": "White Sands National Park is an American national park located in the state of New Mexico. The park features large white sand dunes composed of gypsum crystals. It is the largest gypsum dune field in the world.",
+    "nps_link": "https://www.nps.gov/whsa/index.htm",
+    "states": ["New Mexico"],
+    "title": "White Sands",
+    "id": "park_white-sands",
+    "visitors": 608785,
+    "world_heritage_site": false,
+    "location": "32.78,-106.17",
+    "acres": 146344.31,
+    "square_km": 592.1,
+    "date_established": "2019-12-20T06:00:00Z"
+  },
+  {
+    "description": "Indiana Dunes National Park is a United States National Park located in Northwestern Indiana. The park is located on and around the southern shore of Lake Michigan and is the closest National Park to the city of Chicago. The park is known for its sand dunes, beaches, and interdunal wetlands, and is the most ecologically diverse national park in the United States.",
+    "nps_link": "https://www.nps.gov/indu/index.htm",
+    "states": ["Indiana"],
+    "title": "Indiana Dunes",
+    "id": "park_indiana-dunes",
+    "visitors": 2132387,
+    "world_heritage_site": false,
+    "location": "41.65,-87.05",
+    "acres": 15329.15,
+    "square_km": 62.0,
+    "date_established": "2019-02-15T06:00:00Z"
+  },
+  {
+    "description": "New River Gorge National Park and Preserve is a United States National Park and Preserve located in the Appalachian Mountains of West Virginia. The park is centered on the New River Gorge, which is the longest and deepest gorge in the Appalachian Mountains. The park is known for its white water rafting, rock climbing, and fishing.",
+    "nps_link": "https://www.nps.gov/neri/index.htm",
+    "states": ["West Virginia"],
+    "title": "New River Gorge",
+    "id": "park_new-river-gorge",
+    "visitors": 123847,
+    "world_heritage_site": false,
+    "location": "38.2,-81.08",
+    "acres": 72932.2,
+    "square_km": 295.0,
+    "date_established": "2020-12-27T06:00:00Z"
+  },
+  {
+    "description": "Gateway Arch National Park, formerly known as the Jefferson National Expansion Memorial, is located in St. Louis, Missouri. It features the iconic Gateway Arch, a 630-foot (192 m) monument symbolizing the westward expansion of the United States. The park includes the Museum at the Gateway Arch, the Old Courthouse, and a stretch of the Mississippi River. The Arch itself is a popular destination for visitors, offering tram rides to the top for panoramic views of St. Louis and the river.",
+    "nps_link": "https://www.nps.gov/jeff/index.htm",
+    "states": ["Missouri"],
+    "title": "Gateway Arch",
+    "id": "park_gateway-arch",
+    "visitors": 2000000,
+    "world_heritage_site": false,
+    "location": "38.624691,-90.184776",
+    "acres": 91,
+    "square_km": 0.37,
+    "date_established": "2018-02-22T06:00:00Z"
   }
 ]

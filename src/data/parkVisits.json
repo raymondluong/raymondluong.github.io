@@ -2,5 +2,65 @@
   {
     "date": "2015-05-11",
     "park_id": "park_arches"
+  },
+  {
+    "date": "2015-05-11",
+    "park_id": "park_bryce-canyon"
+  },
+  {
+    "date": "2015-05-11",
+    "park_id": "park_canyonlands"
+  },
+  {
+    "date": "2015-05-11",
+    "park_id": "park_death-valley"
+  },
+  {
+    "date": "2015-05-11",
+    "park_id": "park_grand-canyon"
+  },
+  {
+    "date": "2015-05-11",
+    "park_id": "park_grand-teton"
+  },
+  {
+    "date": "2015-05-11",
+    "park_id": "park_great-smoky-mountains"
+  },
+  {
+    "date": "2015-05-11",
+    "park_id": "park_haleakala"
+  },
+  {
+    "date": "2015-05-11",
+    "park_id": "park_joshua-tree"
+  },
+  {
+    "date": "2015-05-11",
+    "park_id": "park_lassen-volcanic"
+  },
+  {
+    "date": "2015-05-11",
+    "park_id": "park_pinnacles"
+  },
+  {
+    "date": "2015-05-11",
+    "park_id": "park_redwood"
+  },
+  {
+    "date": "2015-05-11",
+    "park_id": "park_rocky-mountain"
+  },
+  {
+    "date": "2015-05-11",
+    "park_id": "park_saguaro"
+  },
+  {
+    "date": "2015-05-11",
+    "park_id": "park_yellowstone"
+  },
+  {
+    "date": "2015-05-11",
+    "park_id": "park_yosemite"
   }
 ]

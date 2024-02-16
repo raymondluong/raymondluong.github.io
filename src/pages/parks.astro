@@ -4,6 +4,7 @@ import Layout from '@layouts/Layout.astro';
 import Main from '@layouts/Main.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
+// @ts-expect-error
 import Parks from '@components/Parks';
 ---
 
@@ -11,7 +12,7 @@ import Parks from '@components/Parks';
   <Header activeNav="parks" />
   <Main
     pageTitle="Parks"
-    pageDesc="Outside of software engineering, I enjoy hiking and one of my bucket list items is to visit all the US national parks. I created this page to log my visits, track my progress, and share photos."
+    pageDesc="Outside of software engineering, I enjoy hiking and one of my lifetime goals is to visit all the US national parks. I created this page to log my visits, track my progress, and (eventually) share photos."
   >
     <Parks client:load />
   </Main>
