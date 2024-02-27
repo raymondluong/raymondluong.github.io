@@ -141,11 +141,9 @@ const { activeNav } = Astro.props;
   nav ul li a {
     @apply w-full px-4 py-3 text-center font-medium hover:text-skin-accent sm:my-0 sm:px-2 sm:py-1;
   }
-  nav ul li:nth-child(4) a {
-    @apply w-auto;
-  }
-  nav ul li:nth-child(4),
-  nav ul li:nth-child(5) {
+
+  /* For last two icons in mobile menu */
+  nav ul li:nth-last-child(-n + 2) {
     @apply col-span-1;
   }
   nav a.active {
