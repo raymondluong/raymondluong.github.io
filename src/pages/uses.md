@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: 'About'
+title: 'Uses'
 ---
 
 My /uses entry, inspired by [Wes Bos](https://wesbos.com/uses) and [uses.tech](https://uses.tech/). Last updated in February 2024.
