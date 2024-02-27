@@ -3,18 +3,19 @@ layout: ../layouts/AboutLayout.astro
 title: 'About'
 ---
 
-Hi! I'm a Front End Engineer interested in design systems, developer productivity + tooling, accessibility, TypeScript, CSS, and UI/UX design. Based in San Francisco. 🌉
-
-I currently work at [Mercury](https://mercury.com/) on the Front End Developer User Experience team. I work on design systems, developer productivity, build tooling, accessibility, reusable libraries, testing, documentation, and anything else needed to create a seamless front end engineering experience and support our product teams in building delightful banking products for startups. Check out [my LinkedIn](https://www.linkedin.com/in/raymondluong/) for more details on my work experience.
+Hi, I'm Raymond. I'm a Front End Engineer interested in design systems, developer productivity + tooling, accessibility, TypeScript, CSS, and UI/UX design. Currently based in San Francisco. 🌉
 
 Technologies I have experience with:
 
 - JavaScript, TypeScript, HTML, CSS
-- React, Redux, GraphQL
-- Vite, Webpack
-- ESLint, Prettier
+- React, Redux
+- Vite, Webpack, ESLint, Prettier
 - Storybook, Figma
-- Jest, React Testing Library, Enzyme
+
+I currently work at [Mercury](https://mercury.com/) on the Front End Developer User Experience team. I've previously worked at [Gusto](https://gusto.com/), [Front](https://front.com), and [Gem](https://gem.com).
+Check out [my LinkedIn](https://www.linkedin.com/in/raymondluong/) for more details on my work experience and my [uses page](/uses) for my current software and hardware setup.
+
+Outside of software engineering, I like to [visit national parks](/parks), lift weights, play tennis, do/make crosswords, read sci-fi/mystery, travel to new cities, and produce electronic music.
 
 Thanks for reading! Here's a picture of me petting an incredibly soft llama:
 
