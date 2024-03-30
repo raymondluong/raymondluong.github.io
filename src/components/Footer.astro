@@ -11,9 +11,11 @@ const { noMarginTop = false } = Astro.props;
 
 <footer class={`${noMarginTop ? '' : 'mt-auto'}`}>
   <Hr noPadding />
-  <div class="footer-wrapper text-sm">
+  <div class="footer-wrapper text-xs">
     <Socials />
-    <div class="copyright-wrapper">Built with Astro 🚀</div>
+    <div class="copyright-wrapper">
+      © Raymond Luong. Built with Astro, Netlify, and GitHub.
+    </div>
   </div>
 </footer>
 
