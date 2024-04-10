@@ -88,14 +88,14 @@ const Parks = () => {
         setGroupBy={setGroupBy}
       />
       {groupBy === 'state' && (
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
           {sortedGroupedParks.map(([state, parks]) => (
             <State key={state} state={state} parks={parks} filter={filter} />
           ))}
         </div>
       )}
       {groupBy === 'none' && (
-        <ul className="columns-3 gap-4">
+        <ul className="columns-2 gap-4 sm:columns-3">
           {allParks.map((park) => (
             <ParkVisit key={park.id} parkId={park.id} filter={filter} />
           ))}
