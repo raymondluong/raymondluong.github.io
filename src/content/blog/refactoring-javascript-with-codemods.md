@@ -62,7 +62,7 @@ module.exports = function(file, api) {
 
   // Step 2: Apply a code transformation and replace the code
   instances.forEach(instance => {
-    j(path).replaceWith(…);
+    j(instance).replaceWith(…);
   });
   return root.toSource();
 }
