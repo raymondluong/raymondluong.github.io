@@ -9,8 +9,10 @@ Technologies I have experience with:
 
 - JavaScript, TypeScript, HTML, CSS
 - React, Redux
-- Vite, Webpack, ESLint, Prettier
+- Vite, Webpack, Rollup
+- ESLint, Prettier, Biome
 - Storybook, Figma
+- GitHub Actions
 
 I've previously worked at [Gusto](https://gusto.com/), [Front](https://front.com), and [Gem](https://gem.com).
 Check out [my LinkedIn](https://www.linkedin.com/in/raymondluong/) for more details on my work experience and my [uses page](/uses) for my current software and hardware setup.
