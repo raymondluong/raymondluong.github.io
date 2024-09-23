@@ -15,7 +15,7 @@ Technologies I have experience with:
 I've previously worked at [Gusto](https://gusto.com/), [Front](https://front.com), and [Gem](https://gem.com).
 Check out [my LinkedIn](https://www.linkedin.com/in/raymondluong/) for more details on my work experience and my [uses page](/uses) for my current software and hardware setup.
 
-Outside of software engineering, I like to [visit national parks](/parks), lift weights, play tennis, do/make crosswords, read sci-fi/mystery, travel to new cities, and produce electronic music.
+Outside of software engineering, I like to [visit national parks](/parks), play tennis, do/make crosswords, read sci-fi/mystery, lift weights, and travel to new cities.
 
 Thanks for reading! Here's a picture of me petting an incredibly soft llama:
 
