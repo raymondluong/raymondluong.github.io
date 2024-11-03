@@ -62,5 +62,13 @@
   {
     "date": "2015-05-11",
     "park_id": "park_yosemite"
+  },
+  {
+    "date": "2024-09-09",
+    "park_id": "park_olympic"
+  },
+  {
+    "date": "2024-09-12",
+    "park_id": "park_mount-rainier"
   }
 ]
