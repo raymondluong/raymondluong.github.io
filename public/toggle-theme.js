@@ -4,13 +4,13 @@ const primaryColorScheme = ''; // "light" | "dark"
 const currentTheme = localStorage.getItem('theme');
 
 function getPreferTheme() {
-  // return theme value in local storage if it is set
-  if (currentTheme) return currentTheme;
+  // explicit user choice in local storage wins
+  if (currentTheme === 'light' || currentTheme === 'dark') return currentTheme;
 
   // return primary color scheme if it is set
   if (primaryColorScheme) return primaryColorScheme;
 
-  // return user device's prefer color scheme
+  // otherwise (unset / 'auto') follow user device's preferred color scheme
   return window.matchMedia('(prefers-color-scheme: dark)').matches
     ? 'dark'
     : 'light';
@@ -24,7 +24,10 @@ function setPreference() {
 }
 
 function reflectPreference() {
+  const stored = localStorage.getItem('theme');
+  const mode = stored === 'light' || stored === 'dark' ? stored : 'auto';
   document.firstElementChild.setAttribute('data-theme', themeValue);
+  document.firstElementChild.setAttribute('data-theme-mode', mode);
 
   document.querySelector('#theme-btn')?.setAttribute('aria-label', themeValue);
 }
@@ -43,10 +46,12 @@ window.onload = () => {
   });
 };
 
-// sync with system changes
+// sync with system changes — but don't clobber a user's explicit pick
 window
   .matchMedia('(prefers-color-scheme: dark)')
   .addEventListener('change', ({ matches: isDark }) => {
+    const stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') return;
     themeValue = isDark ? 'dark' : 'light';
-    setPreference();
+    reflectPreference();
   });
