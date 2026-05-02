@@ -1,0 +1,276 @@
+---
+import Page from '@layouts/Page.astro';
+import { getCollection } from 'astro:content';
+import getSortedPosts from '@utils/getSortedPosts';
+import slugify from '@utils/slugify';
+
+const posts = await getCollection('blog', ({ data }) => data.featured && !data.draft);
+const featuredPosts = getSortedPosts(posts);
+
+const COLS = 65;
+const ROWS = 19;
+
+function buildCourtCells() {
+  const set = new Set<string>();
+  const T = 1;
+  const B = ROWS - 2;
+  const L = 4;
+  const R = COLS - 5;
+  const SL = T + 2;
+  const SR = B - 2;
+  const SVL = L + Math.round((R - L) * 0.27);
+  const SVR = R - Math.round((R - L) * 0.27);
+  const NET = Math.round((L + R) / 2);
+  const MID_R = Math.round((SL + SR) / 2);
+  const hLine = (r: number, c0: number, c1: number) => {
+    for (let c = c0; c <= c1; c++) set.add(r + ',' + c);
+  };
+  const vLine = (c: number, r0: number, r1: number) => {
+    for (let r = r0; r <= r1; r++) set.add(r + ',' + c);
+  };
+  hLine(T, L, R);
+  hLine(B, L, R);
+  vLine(L, T, B);
+  vLine(R, T, B);
+  hLine(SL, L, R);
+  hLine(SR, L, R);
+  vLine(SVL, SL, SR);
+  vLine(SVR, SL, SR);
+  hLine(MID_R, SVL, SVR);
+  set.add(MID_R + ',' + L);
+  set.add(MID_R + ',' + R);
+  for (let r = 0; r < ROWS; r++) set.add(r + ',' + NET);
+  return set;
+}
+
+const courtCells = buildCourtCells();
+const cellsHtml = Array.from({ length: ROWS * COLS }, (_, idx) => {
+  const r = Math.floor(idx / COLS);
+  const c = idx % COLS;
+  return courtCells.has(r + ',' + c)
+    ? '<div class="cell" data-on="1"></div>'
+    : '<div class="cell"></div>';
+}).join('');
+---
+
+<Page isHome>
+  <p class="lede">
+    👋 I'm Raymond, a front end engineer who builds the tools that build the
+    products.
+  </p>
+
+  <div
+    class="tokens"
+    id="tokens"
+    data-cols={COLS}
+    data-rows={ROWS}
+    style={`--cols: ${COLS}; --rows: ${ROWS};`}
+    set:html={cellsHtml}
+  />
+
+  <dl class="section">
+    <div class="row">
+      <dt>Now</dt>
+      <dd>
+        <p>
+          Front end platform + design systems engineer at <a
+            href="https://mercury.com"
+            target="_blank"
+            rel="noopener noreferrer">Mercury</a
+          >. Recently, I rolled out dark mode across the product and migrated
+          our bundler from Webpack to Vite. Day-to-day, I work on foundational
+          infrastructure, build tooling, and design systems for our product
+          engineers.
+        </p>
+      </dd>
+    </div>
+
+    <div class="row">
+      <dt>Background</dt>
+      <dd>
+        <div class="item">
+          <span
+            ><b>Mercury</b> · Front End Platform + Design Systems Engineer</span
+          >
+          <span class="date">2023 — now</span>
+        </div>
+        <div class="item">
+          <span
+            ><b>Gem</b> · Front End Platform + Design Systems Engineer</span
+          >
+          <span class="date">2021 — 2023</span>
+        </div>
+        <div class="item">
+          <span><b>Front</b> · Front End Product Engineer</span>
+          <span class="date">2020 — 2021</span>
+        </div>
+        <div class="item">
+          <span><b>Gusto</b> · Full Stack Product Engineer</span>
+          <span class="date">2017 — 2020</span>
+        </div>
+        <div class="item">
+          <span><b>Stanford</b> · M.S. Computer Science</span>
+          <span class="date">2015 — 2016</span>
+        </div>
+        <div class="item">
+          <span><b>Stanford</b> · B.S. Management Science & Engineering</span>
+          <span class="date">2011 — 2015</span>
+        </div>
+      </dd>
+    </div>
+
+    <div class="row">
+      <dt>Interests</dt>
+      <dd>
+        <p>
+          JavaScript/TypeScript. Build tooling. UI/UX design. Accessibility.
+          Codemods. Making large-scale code migrations less scary.
+        </p>
+        <p>Tennis. Electronic music. National parks.</p>
+      </dd>
+    </div>
+
+    {
+      featuredPosts.length > 0 && (
+        <div class="row">
+          <dt>Writing</dt>
+          <dd>
+            {featuredPosts.map(({ data }) => (
+              <p>
+                <a href={`/blog/${slugify(data)}`}>{data.title}</a>
+              </p>
+            ))}
+          </dd>
+        </div>
+      )
+    }
+
+    <div class="row">
+      <dt>Elsewhere</dt>
+      <dd>
+        <a
+          href="https://linkedin.com/in/raymondluong"
+          target="_blank"
+          rel="noopener noreferrer">LinkedIn</a
+        >
+        &nbsp;·&nbsp;
+        <a
+          href="https://github.com/raymondluong"
+          target="_blank"
+          rel="noopener noreferrer">GitHub</a
+        >
+      </dd>
+    </div>
+  </dl>
+</Page>
+
+<style is:global>
+  .tokens {
+    position: relative;
+    height: 340px;
+    margin: 0 0 44px;
+    border: 1px solid var(--rule);
+    background: var(--hero-bg);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(var(--cols, 64), 1fr);
+    grid-template-rows: repeat(var(--rows, 18), 1fr);
+    gap: 2px;
+    padding: 18px;
+    transition: background 0.25s ease, border-color 0.25s ease;
+  }
+  .tokens .cell {
+    background: var(--cell-off);
+    transition: background 0.35s ease;
+    border-radius: 1px;
+  }
+  /* paints the court before the JS animation loop takes over the inline
+     backgrounds; keeps the static court visible if JS is slow or disabled */
+  .tokens .cell[data-on='1'] {
+    background: var(--cell-on);
+  }
+
+  @media (max-width: 720px) {
+    .tokens {
+      height: 260px;
+    }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    const tokensEl = document.getElementById('tokens');
+    if (!tokensEl) return;
+    const COLS = +tokensEl.dataset.cols;
+    const ROWS = +tokensEl.dataset.rows;
+    const tokenCells = Array.from(tokensEl.children);
+
+    let mouseC = -100,
+      mouseR = -100;
+    let mouseActive = false;
+
+    tokensEl.addEventListener('mousemove', (e) => {
+      const rect = tokensEl.getBoundingClientRect();
+      mouseC = ((e.clientX - rect.left) / rect.width) * COLS - 1;
+      mouseR = ((e.clientY - rect.top) / rect.height) * ROWS - 1;
+      mouseActive = true;
+    });
+    tokensEl.addEventListener('mouseleave', () => {
+      mouseActive = false;
+      setTimeout(paintIdle, 50);
+    });
+
+    function getCss(name) {
+      return getComputedStyle(document.documentElement)
+        .getPropertyValue(name)
+        .trim();
+    }
+
+    function resolvedTheme() {
+      return document.documentElement.dataset.theme || 'light';
+    }
+
+    function paintIdle() {
+      const off = getCss('--cell-off');
+      const on = getCss('--cell-on');
+      for (let i = 0; i < tokenCells.length; i++) {
+        const el = tokenCells[i];
+        el.style.background = el.dataset.on === '1' ? on : off;
+      }
+    }
+
+    function animateTokens() {
+      if (!mouseActive) {
+        requestAnimationFrame(animateTokens);
+        return;
+      }
+      const off = getCss('--cell-off');
+      const on = getCss('--cell-on');
+      const theme = resolvedTheme();
+      const ballCore = theme === 'dark' ? '#d6e85a' : '#c6d84a';
+      const ballHalo = theme === 'dark' ? '#5a6a2a' : '#e4ecb0';
+      const ballSeam = theme === 'dark' ? '#2a3242' : '#f7f5e8';
+
+      for (let i = 0; i < tokenCells.length; i++) {
+        const el = tokenCells[i];
+        const r = (i / COLS) | 0;
+        const c = i % COLS;
+        const dx = c - mouseC,
+          dy = r - mouseR;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        const isCourt = el.dataset.on === '1';
+        let bg;
+        if (dist < 1.5) bg = ballCore;
+        else if (dist < 3.0) bg = isCourt ? on : ballHalo;
+        else if (dist < 5.0) bg = isCourt ? on : ballSeam;
+        else bg = isCourt ? on : off;
+        el.style.background = bg;
+      }
+      requestAnimationFrame(animateTokens);
+    }
+
+    document.addEventListener('themechange', paintIdle);
+    paintIdle();
+    animateTokens();
+  })();
+</script>

@@ -1,0 +1,367 @@
+---
+import Layout from '@layouts/Layout.astro';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  isHome?: boolean;
+}
+
+const { title, description, ogImage, isHome = false } = Astro.props;
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <div class="page">
+    <div class="masthead">
+      {
+        isHome ? (
+          <h1 class="name">Raymond Luong</h1>
+        ) : (
+          <a class="name name-link" href="/">
+            Raymond Luong
+          </a>
+        )
+      }
+      <div class="masthead-right">
+        <div class="meta">San Francisco</div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg
+            id="iconSun"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="4"></circle>
+            <line x1="12" y1="2" x2="12" y2="5"></line>
+            <line x1="12" y1="19" x2="12" y2="22"></line>
+            <line x1="2" y1="12" x2="5" y2="12"></line>
+            <line x1="19" y1="12" x2="22" y2="12"></line>
+            <line x1="4.5" y1="4.5" x2="6.6" y2="6.6"></line>
+            <line x1="17.4" y1="17.4" x2="19.5" y2="19.5"></line>
+            <line x1="4.5" y1="19.5" x2="6.6" y2="17.4"></line>
+            <line x1="17.4" y1="6.6" x2="19.5" y2="4.5"></line>
+          </svg>
+          <svg
+            id="iconMoon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"></path>
+          </svg>
+          <svg
+            id="iconAuto"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="8"></circle>
+            <path d="M12 4 A8 8 0 0 1 12 20 Z" fill="currentColor" stroke="none"
+            ></path>
+          </svg>
+          <span class="tip"></span>
+        </button>
+      </div>
+    </div>
+
+    <slot />
+
+    <div class="foot">raymondluong.com</div>
+  </div>
+</Layout>
+
+<style is:global>
+  :root,
+  [data-theme='light'] {
+    --ink: #0b2545;
+    --paper: #fbfaf6;
+    --dim: #5a6a86;
+    --rule: rgba(11, 37, 69, 0.15);
+    --hero-bg: #ffffff;
+    --cell-off: #f0ede4;
+    --cell-on: #0b2545;
+  }
+
+  [data-theme='dark'] {
+    --ink: #e8ecf2;
+    --paper: #0d1421;
+    --dim: #7e8aa3;
+    --rule: rgba(232, 236, 242, 0.14);
+    --hero-bg: #131b2c;
+    --cell-off: #1c2638;
+    --cell-on: #e8ecf2;
+  }
+
+  :root {
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  /* Override base.css body styles. `html body` outweighs the layout's `body` rule. */
+  html body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    display: block;
+    min-height: 0;
+    -webkit-font-smoothing: antialiased;
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+
+  .page a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    transition: border-color 0.18s ease;
+  }
+  .page a:hover {
+    border-color: var(--ink);
+  }
+
+  .meta {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 80px 48px 100px;
+  }
+
+  .masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: 36px;
+  }
+  .masthead-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .name {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: -0.6px;
+    margin: 0;
+  }
+  .page a.name-link {
+    border-bottom: none;
+  }
+
+  .theme-toggle {
+    background: transparent;
+    border: none;
+    color: var(--dim);
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 999px;
+    transition: color 0.18s ease, background 0.18s ease;
+    position: relative;
+  }
+  .theme-toggle:hover {
+    color: var(--ink);
+    background: var(--rule);
+  }
+  .theme-toggle svg {
+    width: 18px;
+    height: 18px;
+    display: none;
+  }
+  [data-theme-mode='auto'] #iconAuto,
+  [data-theme-mode='light'] #iconSun,
+  [data-theme-mode='dark'] #iconMoon {
+    display: block;
+  }
+  .theme-toggle .tip {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 2px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-2px);
+    transition: opacity 0.18s ease, transform 0.18s ease;
+  }
+  [data-theme-mode='auto'] .tip::before {
+    content: 'Auto';
+  }
+  [data-theme-mode='light'] .tip::before {
+    content: 'Light';
+  }
+  [data-theme-mode='dark'] .tip::before {
+    content: 'Dark';
+  }
+  .theme-toggle:hover .tip,
+  .theme-toggle:focus-visible .tip {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .lede {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 1.32;
+    margin: 0 0 28px;
+    max-width: 720px;
+    letter-spacing: -0.4px;
+    text-wrap: pretty;
+  }
+
+  .section {
+    margin: 0 0 36px;
+  }
+  .section dd {
+    margin: 0;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    padding: 16px 0;
+    border-top: 1px solid var(--rule);
+    gap: 28px;
+  }
+  .row:last-child {
+    border-bottom: 1px solid var(--rule);
+  }
+  .row dt {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dim);
+    padding-top: 4px;
+  }
+  .row dd {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  .row dd p {
+    margin: 0 0 8px;
+  }
+  .row dd p:last-child {
+    margin-bottom: 0;
+  }
+  .row dd .item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 4px 0;
+  }
+  .row dd .item .date {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--dim);
+    white-space: nowrap;
+  }
+  .row dd a.arrow::after {
+    content: ' ↗';
+    font-family: var(--mono);
+    color: var(--dim);
+  }
+
+  .foot {
+    margin-top: 56px;
+    display: flex;
+    justify-content: end;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--dim);
+  }
+
+  @media (max-width: 720px) {
+    .page {
+      padding: 48px 24px 72px;
+    }
+    .row {
+      grid-template-columns: 1fr;
+      gap: 6px;
+      padding: 14px 0;
+    }
+    .lede {
+      font-size: 22px;
+    }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    const STORAGE_KEY = 'theme';
+
+    function readStoredTheme() {
+      const v = localStorage.getItem(STORAGE_KEY);
+      return v === 'light' || v === 'dark' ? v : 'auto';
+    }
+
+    let themeMode = readStoredTheme();
+
+    function resolvedTheme() {
+      if (themeMode === 'auto') {
+        return matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light';
+      }
+      return themeMode;
+    }
+
+    function applyTheme() {
+      const root = document.documentElement;
+      root.dataset.theme = resolvedTheme();
+      root.dataset.themeMode = themeMode;
+      document.dispatchEvent(new CustomEvent('themechange'));
+    }
+
+    matchMedia('(prefers-color-scheme: dark)').addEventListener(
+      'change',
+      () => {
+        if (themeMode === 'auto') applyTheme();
+      },
+    );
+
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const next = { auto: 'light', light: 'dark', dark: 'auto' };
+      themeMode = next[themeMode] || 'auto';
+      if (themeMode === 'auto') localStorage.removeItem(STORAGE_KEY);
+      else localStorage.setItem(STORAGE_KEY, themeMode);
+      applyTheme();
+    });
+
+    applyTheme();
+  })();
+</script>

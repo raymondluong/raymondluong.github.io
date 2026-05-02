@@ -1,0 +1,188 @@
+---
+import { SITE } from '@config';
+import Page from '@layouts/Page.astro';
+import slugify from '@utils/slugify';
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  pageNum: number;
+  totalPages: number;
+  posts: CollectionEntry<'blog'>[];
+}
+
+const { pageNum, totalPages, posts } = Astro.props;
+
+const formatDate = (d: string | Date) =>
+  new Date(d).toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  });
+
+const prevHref =
+  pageNum > 1
+    ? `/blog${pageNum - 1 !== 1 ? '/' + (pageNum - 1) : ''}`
+    : null;
+const nextHref = pageNum < totalPages ? `/blog/${pageNum + 1}` : null;
+---
+
+<Page title={`Writing | ${SITE.title}`}>
+  <header class="listing-header">
+    <h1 class="listing-title">Writing</h1>
+    <p class="listing-lede">
+      Notes and essays on front end engineering, build tooling, and design
+      systems.
+    </p>
+  </header>
+
+  <ul class="post-list">
+    {
+      posts.map(({ data }) => (
+        <li class="post-list-item">
+          <a href={`/blog/${slugify(data)}`} class="post-list-link">
+            <div class="post-list-top">
+              <h2 class="post-list-title">{data.title}</h2>
+              <span class="post-list-date">{formatDate(data.date)}</span>
+            </div>
+            {data.description && (
+              <p class="post-list-desc">{data.description}</p>
+            )}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  {
+    (prevHref || nextHref) && (
+      <nav class="post-list-pagination" aria-label="Pagination">
+        {prevHref ? (
+          <a href={prevHref}>← Prev</a>
+        ) : (
+          <span class="disabled">← Prev</span>
+        )}
+        <span class="page-indicator">
+          Page {pageNum} / {totalPages}
+        </span>
+        {nextHref ? (
+          <a href={nextHref}>Next →</a>
+        ) : (
+          <span class="disabled">Next →</span>
+        )}
+      </nav>
+    )
+  }
+</Page>
+
+<style is:global>
+  .listing-header {
+    margin-bottom: 28px;
+  }
+  .listing-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: -0.5px;
+    margin: 0 0 12px;
+    line-height: 1.15;
+  }
+  .listing-lede {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 22px;
+    color: var(--dim);
+    margin: 0;
+    max-width: 640px;
+    line-height: 1.4;
+    text-wrap: pretty;
+  }
+
+  .post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px;
+  }
+  .post-list-item {
+    border-top: 1px solid var(--rule);
+  }
+  .post-list-item:last-child {
+    border-bottom: 1px solid var(--rule);
+  }
+  .page .post-list-link {
+    display: block;
+    padding: 18px 0;
+    border-bottom: none;
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.18s ease;
+  }
+  .page .post-list-link:hover {
+    border-bottom: none;
+    opacity: 0.7;
+  }
+  .post-list-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+  }
+  .post-list-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: -0.3px;
+    margin: 0;
+    line-height: 1.3;
+  }
+  .post-list-date {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--dim);
+    white-space: nowrap;
+  }
+  .post-list-desc {
+    font-size: 15px;
+    color: var(--dim);
+    margin: 6px 0 0;
+    line-height: 1.5;
+  }
+
+  .post-list-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+  .page .post-list-pagination a {
+    color: var(--dim);
+    border-bottom: none;
+  }
+  .page .post-list-pagination a:hover {
+    color: var(--ink);
+  }
+  .post-list-pagination .disabled {
+    color: var(--rule);
+    cursor: default;
+  }
+  .post-list-pagination .page-indicator {
+    color: var(--dim);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 11px;
+  }
+
+  @media (max-width: 720px) {
+    .listing-title {
+      font-size: 28px;
+    }
+    .listing-lede {
+      font-size: 18px;
+    }
+    .post-list-top {
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+</style>
