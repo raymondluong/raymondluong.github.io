@@ -1,42 +1,52 @@
 ---
 import { SITE } from '@config';
-import Layout from '@layouts/Layout.astro';
-import Header from '@components/Header.astro';
-import Footer from '@components/Footer.astro';
-import LinkButton from '@components/LinkButton.astro';
+import Page from '@layouts/Page.astro';
 ---
 
-<Layout title={`404 Not Found | ${SITE.title}`}>
-  <Header />
+<Page title={`404 | ${SITE.title}`}>
+  <div class="not-found">
+    <div class="meta">Error 404</div>
+    <h1 class="not-found-title">Page not found</h1>
+    <p class="not-found-body">
+      ¯\_(ツ)_/¯ &nbsp;The page you’re looking for doesn’t exist. Try heading <a
+        href="/">back home</a
+      >.
+    </p>
+  </div>
+</Page>
 
-  <main id="main-content">
-    <div class="not-found-wrapper">
-      <h1 aria-label="404 Not Found">404</h1>
-      <span aria-hidden="true">¯\_(ツ)_/¯</span>
-      <p>Page Not Found</p>
-      <LinkButton
-        href="/"
-        className="my-6 underline decoration-dashed underline-offset-8 text-lg"
-      >
-        Go back home
-      </LinkButton>
-    </div>
-  </main>
+<style is:global>
+  .not-found {
+    padding: 24px 0 12px;
+  }
+  .not-found .meta {
+    margin-bottom: 12px;
+  }
+  .not-found-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.15;
+    letter-spacing: -0.6px;
+    margin: 0 0 14px;
+  }
+  .not-found-body {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--dim);
+    margin: 0;
+    max-width: 640px;
+    text-wrap: pretty;
+  }
 
-  <Footer />
-</Layout>
-
-<style>
-  #main-content {
-    @apply mx-auto flex max-w-4xl flex-1 items-center justify-center;
-  }
-  .not-found-wrapper {
-    @apply mb-14 flex flex-col items-center justify-center;
-  }
-  .not-found-wrapper h1 {
-    @apply text-9xl font-bold text-skin-accent;
-  }
-  .not-found-wrapper p {
-    @apply mt-4 text-2xl sm:text-3xl;
+  @media (max-width: 720px) {
+    .not-found-title {
+      font-size: 30px;
+    }
+    .not-found-body {
+      font-size: 18px;
+    }
   }
 </style>
