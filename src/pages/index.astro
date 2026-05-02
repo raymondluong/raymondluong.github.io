@@ -4,7 +4,10 @@ import { getCollection } from 'astro:content';
 import getSortedPosts from '@utils/getSortedPosts';
 import slugify from '@utils/slugify';
 
-const posts = await getCollection('blog', ({ data }) => data.featured && !data.draft);
+const posts = await getCollection(
+  'blog',
+  ({ data }) => data.featured && !data.draft,
+);
 const featuredPosts = getSortedPosts(posts);
 
 const COLS = 65;
@@ -95,9 +98,7 @@ const cellsHtml = Array.from({ length: ROWS * COLS }, (_, idx) => {
           <span class="date">2023 — now</span>
         </div>
         <div class="item">
-          <span
-            ><b>Gem</b> · Front End Platform + Design Systems Engineer</span
-          >
+          <span><b>Gem</b> · Front End Platform + Design Systems Engineer</span>
           <span class="date">2021 — 2023</span>
         </div>
         <div class="item">
@@ -177,7 +178,9 @@ const cellsHtml = Array.from({ length: ROWS * COLS }, (_, idx) => {
     grid-template-rows: repeat(var(--rows, 18), 1fr);
     gap: 2px;
     padding: 18px;
-    transition: background 0.25s ease, border-color 0.25s ease;
+    transition:
+      background 0.25s ease,
+      border-color 0.25s ease;
   }
   .tokens .cell {
     background: var(--cell-off);

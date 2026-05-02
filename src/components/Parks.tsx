@@ -24,39 +24,48 @@ type ParkVisit = {
 };
 
 const createParkMap = (parks: Park[]) => {
-  const parkMap = parks.reduce((acc, park) => {
-    acc[park.id] = park;
-    return acc;
-  }, {} as Record<string, Park>);
+  const parkMap = parks.reduce(
+    (acc, park) => {
+      acc[park.id] = park;
+      return acc;
+    },
+    {} as Record<string, Park>,
+  );
 
   return parkMap;
 };
 
 const groupParksByState = (parks: Park[]) => {
-  const groupedParks = parks.reduce((acc, park) => {
-    const states = park.states;
-    states.forEach((state) => {
-      if (!acc[state]) {
-        acc[state] = [];
-      }
-      acc[state].push(park.id);
-    });
-    return acc;
-  }, {} as Record<string, string[]>);
+  const groupedParks = parks.reduce(
+    (acc, park) => {
+      const states = park.states;
+      states.forEach((state) => {
+        if (!acc[state]) {
+          acc[state] = [];
+        }
+        acc[state].push(park.id);
+      });
+      return acc;
+    },
+    {} as Record<string, string[]>,
+  );
 
   return groupedParks;
 };
 
 // TODO: Use Object.groupBy when TS 5.4 is available
 const groupParkVisitsByPark = (parkVisits: ParkVisit[]) => {
-  const groupedVisits = parkVisits.reduce((acc, visit) => {
-    const parkId = visit.park_id;
-    if (!acc[parkId]) {
-      acc[parkId] = [];
-    }
-    acc[parkId].push(visit);
-    return acc;
-  }, {} as Record<string, ParkVisit[]>);
+  const groupedVisits = parkVisits.reduce(
+    (acc, visit) => {
+      const parkId = visit.park_id;
+      if (!acc[parkId]) {
+        acc[parkId] = [];
+      }
+      acc[parkId].push(visit);
+      return acc;
+    },
+    {} as Record<string, ParkVisit[]>,
+  );
 
   return groupedVisits;
 };

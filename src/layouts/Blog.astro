@@ -20,9 +20,7 @@ const formatDate = (d: string | Date) =>
   });
 
 const prevHref =
-  pageNum > 1
-    ? `/blog${pageNum - 1 !== 1 ? '/' + (pageNum - 1) : ''}`
-    : null;
+  pageNum > 1 ? `/blog${pageNum - 1 !== 1 ? '/' + (pageNum - 1) : ''}` : null;
 const nextHref = pageNum < totalPages ? `/blog/${pageNum + 1}` : null;
 ---
 
