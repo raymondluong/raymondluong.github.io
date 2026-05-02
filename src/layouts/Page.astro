@@ -311,6 +311,134 @@ const { title, description, ogImage, isHome = false } = Astro.props;
     color: var(--dim);
   }
 
+  /* Shared markdown/prose styles — used by blog posts and any markdown page
+     (about, uses, etc.) wrapping its content in <div class="prose">. */
+  .prose {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+  .prose > :first-child {
+    margin-top: 0;
+  }
+  .prose h2,
+  .prose h3,
+  .prose h4 {
+    font-family: var(--serif);
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    line-height: 1.25;
+    margin: 40px 0 12px;
+  }
+  .prose h2 {
+    font-size: 26px;
+  }
+  .prose h3 {
+    font-size: 21px;
+  }
+  .prose h4 {
+    font-size: 18px;
+  }
+  .prose p {
+    margin: 0 0 18px;
+  }
+  .prose ul,
+  .prose ol {
+    padding-left: 22px;
+    margin: 0 0 18px;
+  }
+  .prose li {
+    margin: 4px 0;
+  }
+  .prose li > p {
+    margin: 0;
+  }
+  .prose a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    transition: border-color 0.18s ease;
+  }
+  .prose a:hover {
+    border-color: var(--ink);
+  }
+  .prose code {
+    font-family: var(--mono);
+    font-size: 0.88em;
+    background: var(--cell-off);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+  .prose pre {
+    padding: 16px 18px;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 0 0 22px;
+    font-size: 13.5px;
+    line-height: 1.55;
+    border: 1px solid var(--rule);
+  }
+  .prose pre code {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+  }
+  /* Pin code block bg to --cell-off in both themes — Vitesse's pure-white
+     light bg fights the cream --paper, and we want code to feel calm.
+     Note: Astro emits class="astro-code", not "shiki". */
+  .prose pre.astro-code {
+    background-color: var(--cell-off) !important;
+  }
+  /* Dark mode: swap token colors to Shiki's emitted --shiki-dark vars. */
+  [data-theme='dark'] .prose .astro-code,
+  [data-theme='dark'] .prose .astro-code span {
+    color: var(--shiki-dark) !important;
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
+  }
+  .prose blockquote {
+    margin: 0 0 22px;
+    padding: 4px 0 4px 18px;
+    border-left: 2px solid var(--rule);
+    color: var(--dim);
+    font-style: italic;
+  }
+  .prose blockquote p:last-child {
+    margin-bottom: 0;
+  }
+  .prose img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    margin: 12px 0;
+  }
+  .prose hr {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 32px 0;
+  }
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 22px;
+    font-size: 15px;
+  }
+  .prose th,
+  .prose td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .prose th {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+
   @media (max-width: 720px) {
     .page {
       padding: 48px 24px 72px;
@@ -322,6 +450,15 @@ const { title, description, ogImage, isHome = false } = Astro.props;
     }
     .lede {
       font-size: 22px;
+    }
+    .prose {
+      font-size: 16px;
+    }
+    .prose h2 {
+      font-size: 22px;
+    }
+    .prose h3 {
+      font-size: 19px;
     }
   }
 </style>

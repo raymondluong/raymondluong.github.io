@@ -1,20 +1,61 @@
 ---
 import { SITE } from '@config';
-import Layout from '@layouts/Layout.astro';
-import Main from '@layouts/Main.astro';
-import Header from '@components/Header.astro';
-import Footer from '@components/Footer.astro';
+import Page from '@layouts/Page.astro';
 // @ts-expect-error
 import Parks from '@components/Parks';
 ---
 
-<Layout title={`National Parks Log | ${SITE.title}`}>
-  <Header activeNav="parks" />
-  <Main
-    pageTitle="Parks"
-    pageDesc="Outside of software engineering, I enjoy hiking and one of my lifetime goals is to visit all the US national parks. I created this page to log my visits, track my progress, and (eventually) share photos."
-  >
+<Page
+  title={`Parks | ${SITE.title}`}
+  description="A log of my visits to US national parks."
+>
+  <header class="parks-header">
+    <h1 class="parks-title">Parks</h1>
+    <p class="parks-lede">
+      Outside of software engineering, I enjoy hiking and one of my lifetime
+      goals is to visit all the US national parks. I created this page to log my
+      visits, track my progress, and (eventually) share photos.
+    </p>
+  </header>
+
+  <div class="parks-content">
     <Parks client:load />
-  </Main>
-  <Footer />
-</Layout>
+  </div>
+</Page>
+
+<style is:global>
+  .parks-header {
+    margin-bottom: 32px;
+  }
+  .parks-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+    margin: 0 0 12px;
+  }
+  .parks-lede {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 22px;
+    color: var(--dim);
+    margin: 0;
+    max-width: 640px;
+    line-height: 1.4;
+    text-wrap: pretty;
+  }
+  .parks-content {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 720px) {
+    .parks-title {
+      font-size: 28px;
+    }
+    .parks-lede {
+      font-size: 18px;
+    }
+  }
+</style>
