@@ -50,6 +50,89 @@ import Parks from '@components/Parks';
     font-size: 16px;
     line-height: 1.6;
   }
+  .parks-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .parks-content li {
+    padding: 2px 0;
+  }
+
+  .parks-summary {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-bottom: 16px;
+  }
+
+  .parks-controls {
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+    color: var(--dim);
+    font-size: 14px;
+  }
+  .parks-controls-last {
+    margin-bottom: 24px;
+  }
+  .parks-button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--dim);
+    font: inherit;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition:
+      color 0.18s ease,
+      border-color 0.18s ease;
+  }
+  .parks-button:hover {
+    color: var(--ink);
+  }
+  .parks-button-active {
+    color: var(--ink);
+    border-bottom-color: var(--ink);
+  }
+
+  .parks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  @media (min-width: 640px) {
+    .parks-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .parks-state {
+    margin-bottom: 8px;
+  }
+  .parks-state-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -0.2px;
+    margin: 0 0 6px;
+  }
+
+  .parks-flat-list {
+    columns: 2;
+    column-gap: 24px;
+  }
+  @media (min-width: 640px) {
+    .parks-flat-list {
+      columns: 3;
+    }
+  }
+
+  .parks-international {
+    margin-top: 48px;
+  }
 
   @media (max-width: 720px) {
     .parks-title {

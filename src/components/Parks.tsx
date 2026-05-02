@@ -97,14 +97,14 @@ const Parks = () => {
         setGroupBy={setGroupBy}
       />
       {groupBy === 'state' && (
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+        <div className="parks-grid">
           {sortedGroupedParks.map(([state, parks]) => (
             <State key={state} state={state} parks={parks} filter={filter} />
           ))}
         </div>
       )}
       {groupBy === 'none' && (
-        <ul className="columns-2 gap-4 sm:columns-3">
+        <ul className="parks-flat-list">
           {allParks.map((park) => (
             <ParkVisit key={park.id} parkId={park.id} filter={filter} />
           ))}
@@ -117,7 +117,7 @@ const Parks = () => {
 
 const TotalVisited = () => {
   return (
-    <div className="mb-4">
+    <div className="parks-summary">
       Visited: {Object.keys(groupedVisits).length} out of {allParks.length}
     </div>
   );
@@ -134,48 +134,39 @@ const Controls = ({
   setFilter: (filter: Filter) => void;
   setGroupBy: (groupBy: GroupBy) => void;
 }) => {
+  const buttonClass = (active: boolean) =>
+    `parks-button${active ? ' parks-button-active' : ''}`;
+
   return (
     <>
-      <div className="flex gap-4">
+      <div className="parks-controls">
         View by:
         <button
-          className={`hover:underline ${
-            filter === 'visited' ? 'font-bold' : ''
-          }`}
-          onClick={() => {
-            setFilter('visited');
-          }}
+          className={buttonClass(filter === 'visited')}
+          onClick={() => setFilter('visited')}
         >
           Visited
         </button>
         <span>|</span>
         <button
-          className={`hover:underline ${filter === 'all' ? 'font-bold' : ''}`}
-          onClick={() => {
-            setFilter('all');
-          }}
+          className={buttonClass(filter === 'all')}
+          onClick={() => setFilter('all')}
         >
           All
         </button>
       </div>
-      <div className="mb-4 flex gap-4">
+      <div className="parks-controls parks-controls-last">
         Group by:
         <button
-          className={`hover:underline ${
-            groupBy === 'state' ? 'font-bold' : ''
-          }`}
-          onClick={() => {
-            setGroupBy('state');
-          }}
+          className={buttonClass(groupBy === 'state')}
+          onClick={() => setGroupBy('state')}
         >
           State
         </button>
         <span>|</span>
         <button
-          className={`hover:underline ${groupBy === 'none' ? 'font-bold' : ''}`}
-          onClick={() => {
-            setGroupBy('none');
-          }}
+          className={buttonClass(groupBy === 'none')}
+          onClick={() => setGroupBy('none')}
         >
           None
         </button>
@@ -202,8 +193,8 @@ const State = ({
   }
 
   return (
-    <div className="mb-2" key={state}>
-      <h2 className="text-lg font-semibold">{state}</h2>
+    <div className="parks-state" key={state}>
+      <h2 className="parks-state-title">{state}</h2>
       <ul>
         {parks.map((parkId) => {
           return <ParkVisit key={parkId} parkId={parkId} filter={filter} />;
@@ -225,7 +216,7 @@ const ParkVisit = ({ parkId, filter }: { parkId: string; filter: Filter }) => {
 
 const InternationalParks = () => {
   return (
-    <div className="mt-12">
+    <div className="parks-international">
       <p>
         Not directly part of my goal, but I've also visited a few international
         parks:
