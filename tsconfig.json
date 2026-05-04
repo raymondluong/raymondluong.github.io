@@ -4,7 +4,13 @@
     "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
-      "@*": ["./src/*"]
+      "@components/*": ["./src/components/*"],
+      "@config": ["./src/config"],
+      "@content/*": ["./src/content/*"],
+      "@data/*": ["./src/data/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@types": ["./src/types"],
+      "@utils/*": ["./src/utils/*"]
     },
     "jsx": "react-jsx"
   }

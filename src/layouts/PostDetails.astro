@@ -1,6 +1,6 @@
 ---
 import Page from '@layouts/Page.astro';
-import type { CollectionEntry } from 'astro:content';
+import { render, type CollectionEntry } from 'astro:content';
 
 export interface Props {
   post: CollectionEntry<'blog'>;
@@ -8,7 +8,7 @@ export interface Props {
 
 const { post } = Astro.props;
 const { title, description, ogImage, date } = post.data;
-const { Content, remarkPluginFrontmatter } = await post.render();
+const { Content, remarkPluginFrontmatter } = await render(post);
 
 const ogUrl = ogImage ? new URL(ogImage, Astro.url.origin).href : undefined;
 
