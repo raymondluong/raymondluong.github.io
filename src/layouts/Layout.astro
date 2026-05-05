@@ -83,11 +83,6 @@ const socialImageURL = new URL(
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-VEQ6VBZXX4"></script>
     <script>
-      declare global {
-        interface Window {
-          dataLayer: unknown[];
-        }
-      }
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: unknown[]) {
         window.dataLayer.push(args);
